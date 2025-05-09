@@ -23,5 +23,5 @@ jobs:
         with:
           target: release
           npm_token: ${{ secrets.GIT_CLONE_TOKEN }}
-          # github_user: ${{ vars.GH_USER}}
-          # github_email: ${{ vars.GH_EMAIL}}
+          github_user: ${{ secrets.GH_USER}}
+          github_email: ${{ secrets.GH_EMAIL}}

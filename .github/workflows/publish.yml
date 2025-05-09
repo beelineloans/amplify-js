@@ -17,6 +17,7 @@ jobs:
         uses: ./amplify-js/.github/actions/node-and-build
         with:
           is-prebuild: true
+          npm_token: ${{ secrets.GIT_CLONE_TOKEN }}
       - name: Run npm publish
         uses: ./amplify-js/.github/actions/npm-publish
         with:

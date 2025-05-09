@@ -1,9 +1,12 @@
 name: Set Node and Build
 description: Checks out Amplify and builds the package
-# inputs:
-#   is-prebuild:
-#     required: false
-#     default: false
+inputs:
+  is-prebuild:
+    required: false
+    default: false
+  npm_token:
+    description: The npm token that gives the job npm permissions
+    required: true
 runs:
   using: 'composite'
   steps:
@@ -36,13 +39,19 @@ runs:
       run: yarn
       shell: bash
       working-directory: ./amplify-js
+      env:
+        NPM_TOKEN: ${{ inputs.npm_token }}
     - name: Bootstrap
       # if: inputs.is-prebuild != 'true' || steps.cache-build-artifacts.outputs.cache-hit != 'true'
       run: yarn bootstrap
       shell: bash
       working-directory: ./amplify-js
+      env:
+        NPM_TOKEN: ${{ inputs.npm_token }}
     - name: Build packages
       # if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
       run: yarn build
       shell: bash
       working-directory: ./amplify-js
+      env:
+        NPM_TOKEN: ${{ inputs.npm_token }}

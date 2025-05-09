@@ -7,6 +7,16 @@
 [![code coverage](https://codecov.io/gh/aws-amplify/amplify-js/branch/main/graph/badge.svg)](https://codecov.io/gh/aws-amplify/amplify-js)
 [![join discord](https://img.shields.io/discord/308323056592486420?logo=discord)](https://discord.gg/jWVbPfC)
 
+### Beeline - Creating a new version
+
+Following what the `Set Node and Build` GH Action does:
+
+1. Run `yarn`
+2. Revert yarn.lock changes
+3. Run `yarn bootstrap`
+4. Run `yarn build`
+5. Create branch with the name of the package version e.g. `git checkout -b 6.14.4` and commit
+
 ### Reporting Bugs / Feature Requests
 
 [![Open Bugs](https://img.shields.io/github/issues/aws-amplify/amplify-js/bug?color=d73a4a&label=bugs)](https://github.com/aws-amplify/amplify-js/issues?q=is%3Aissue+is%3Aopen+label%3Abug)

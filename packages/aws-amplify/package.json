@@ -1,5 +1,5 @@
 {
-	"name": "@beelineloans/aws-amplify",
+	"name": "aws-amplify",
 	"version": "6.14.4",
 	"description": "AWS Amplify is a JavaScript library for Frontend and mobile developers building cloud-enabled applications.",
 	"main": "./dist/cjs/index.js",

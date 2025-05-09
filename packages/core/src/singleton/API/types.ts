@@ -90,6 +90,10 @@ export interface APIEventsConfig {
 	 * Default auth mode for all the API calls to given service.
 	 */
 	defaultAuthMode: GraphQLAuthMode;
+	/**
+	 * Beeline - Specify the AppSync HTTP endpoint when the `endpoint` is routed through Cloudfront
+	 */
+	host?: string;
 }
 
 export interface APIRestConfig {

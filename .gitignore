@@ -5,12 +5,12 @@ node_modules
 packages/*/node_modules/**
 packages/**/lib/
 packages/**/lib-esm/
-packages/**/dist/
+# packages/**/dist/
 packages/**/es/
-packages/**/esm/
-!packages/aws-amplify/dist/esm/
-packages/**/cjs/
-!packages/aws-amplify/dist/cjs/
+# packages/**/esm/
+# !packages/aws-amplify/dist/esm/
+# packages/**/cjs/
+# !packages/aws-amplify/dist/cjs/
 **/.DS_Store
 .vscode
 .idea

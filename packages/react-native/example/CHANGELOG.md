@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2025-05-09)
+
+### Features
+
+- add host to config, use in connect, subscribe, publish ([cf41a9e](https://github.com/beelineloans/amplify-js/commit/cf41a9eb13bddb38b65ca395b0692888cb6bb400))
+
 ## [0.0.29](https://github.com/aws-amplify/amplify-js/compare/@aws-amplify/react-native-example@0.0.28...@aws-amplify/react-native-example@0.0.29) (2025-04-09)
 
 **Note:** Version bump only for package @aws-amplify/react-native-example

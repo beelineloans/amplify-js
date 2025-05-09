@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2025-05-09)
+
+### Features
+
+- add host to config, use in connect, subscribe, publish ([cf41a9e](https://github.com/aws-amplify/amplify-js/commit/cf41a9eb13bddb38b65ca395b0692888cb6bb400))
+
 ## [2.1.82](https://github.com/aws-amplify/amplify-js/compare/@aws-amplify/datastore-storage-adapter@2.1.81...@aws-amplify/datastore-storage-adapter@2.1.82) (2025-04-28)
 
 **Note:** Version bump only for package @aws-amplify/datastore-storage-adapter

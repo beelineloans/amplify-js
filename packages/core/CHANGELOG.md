@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.12.0 (2025-05-09)
+
+### Features
+
+- add host to config, use in connect, subscribe, publish ([cf41a9e](https://github.com/aws-amplify/amplify-js/commit/cf41a9eb13bddb38b65ca395b0692888cb6bb400))
+
 ## [6.11.4](https://github.com/aws-amplify/amplify-js/compare/@aws-amplify/core@6.11.3...@aws-amplify/core@6.11.4) (2025-04-28)
 
 **Note:** Version bump only for package @aws-amplify/core

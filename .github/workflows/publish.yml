@@ -1,0 +1,27 @@
+name: Publish aws-amplify
+
+on: 
+  push:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Github Publish
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          path: amplify-js
+      - name: Setup node and build the repository
+        uses: ./amplify-js/.github/actions/node-and-build
+        with:
+          is-prebuild: true
+          npm_token: ${{ secrets.GIT_CLONE_TOKEN }}
+      - name: Run npm publish
+        uses: ./amplify-js/.github/actions/npm-publish
+        with:
+          target: release
+          npm_token: ${{ secrets.GIT_CLONE_TOKEN }}
+          github_user: ${{ secrets.GH_USER}}
+          github_email: ${{ secrets.GH_EMAIL}}

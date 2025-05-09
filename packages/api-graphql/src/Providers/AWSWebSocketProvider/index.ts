@@ -220,7 +220,7 @@ export abstract class AWSWebSocketProvider {
 	}
 
 	private async _connectWebSocket(options: AWSAppSyncRealTimeProviderOptions) {
-		const { apiKey, appSyncGraphqlEndpoint, authenticationType, region } =
+		const { apiKey, appSyncGraphqlEndpoint, authenticationType, region, host } =
 			options;
 
 		const { additionalCustomHeaders } =
@@ -233,6 +233,7 @@ export abstract class AWSWebSocketProvider {
 			authenticationType,
 			region,
 			additionalCustomHeaders,
+			host,
 		});
 	}
 
@@ -768,6 +769,7 @@ export abstract class AWSWebSocketProvider {
 		apiKey,
 		region,
 		additionalCustomHeaders,
+		host,
 	}: AWSAppSyncRealTimeProviderOptions) {
 		if (this.socketStatus === SOCKET_STATUS.READY) {
 			return;
@@ -793,6 +795,7 @@ export abstract class AWSWebSocketProvider {
 						appSyncGraphqlEndpoint,
 						region,
 						additionalCustomHeaders,
+						host,
 					});
 
 					const headerString = authHeader ? JSON.stringify(authHeader) : '';

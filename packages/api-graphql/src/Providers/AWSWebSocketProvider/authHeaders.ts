@@ -104,6 +104,7 @@ export const awsRealTimeHeaderBasedAuth = async ({
 	region,
 	additionalCustomHeaders,
 	payload,
+	host: optionsHost,
 }: AWSAppSyncRealTimeAuthInput): Promise<
 	Record<string, string | undefined> | undefined
 > => {
@@ -123,9 +124,11 @@ export const awsRealTimeHeaderBasedAuth = async ({
 	} else {
 		const handler = headerHandler[authenticationType];
 
-		const host = appSyncGraphqlEndpoint
-			? new AmplifyUrl(appSyncGraphqlEndpoint).host
-			: undefined;
+		const host =
+			optionsHost ||
+			(appSyncGraphqlEndpoint
+				? new AmplifyUrl(appSyncGraphqlEndpoint).host
+				: undefined);
 
 		const resolvedApiKey = authenticationType === 'apiKey' ? apiKey : undefined;
 

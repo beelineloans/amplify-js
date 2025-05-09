@@ -7,6 +7,24 @@
 [![code coverage](https://codecov.io/gh/aws-amplify/amplify-js/branch/main/graph/badge.svg)](https://codecov.io/gh/aws-amplify/amplify-js)
 [![join discord](https://img.shields.io/discord/308323056592486420?logo=discord)](https://discord.gg/jWVbPfC)
 
+### Beeline - Changes
+
+1. We need to be able to set the host property in the sub/pub WebSocket messages to the underlying AppSync HTTP endpoint. 
+
+2. We need to be able to set the host property within the Base64 hash of the `sec-websocket-protocol` header to the underlying AppSync HTTP endpoint.
+
+### Beeline - Creating a new version
+
+Following what the `Set Node and Build` GH Action does:
+
+1. Run `yarn`
+2. Revert yarn.lock changes
+3. Run `yarn bootstrap`
+4. Run `yarn build`
+5. Create branch with the name of the package version followed by an incrementer e.g. `git checkout -b 6.14.4-0` and commit
+6. DO NOT MERGE TO MAIN BRANCH, WE WANT TO KEEP THAT CONSISTENT WITH THE ORIGINAL PACKAGE
+7. Delete the `@aws-amplify/adapter-nextjs` and `tsc-compliance-test` packages as they have dependency on aws-amplify which we change to be named @beelineloans/aws-amplify
+
 ### Reporting Bugs / Feature Requests
 
 [![Open Bugs](https://img.shields.io/github/issues/aws-amplify/amplify-js/bug?color=d73a4a&label=bugs)](https://github.com/aws-amplify/amplify-js/issues?q=is%3Aissue+is%3Aopen+label%3Abug)

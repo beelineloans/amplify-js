@@ -8,7 +8,9 @@ packages/**/lib-esm/
 packages/**/dist/
 packages/**/es/
 packages/**/esm/
+!packages/aws-amplify/dist/esm/
 packages/**/cjs/
+!packages/aws-amplify/dist/cjs/
 **/.DS_Store
 .vscode
 .idea

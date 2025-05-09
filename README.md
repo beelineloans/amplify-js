@@ -22,6 +22,7 @@ Following what the `Set Node and Build` GH Action does:
 3. Run `yarn bootstrap`
 4. Run `yarn build`
 5. Create branch with the name of the package version followed by an incrementer e.g. `git checkout -b 6.14.4-0` and commit
+6. DO NOT MERGE TO MAIN BRANCH, WE WANT TO KEEP THAT CONSISTENT WITH THE ORIGINAL PACKAGE
 
 ### Reporting Bugs / Feature Requests
 

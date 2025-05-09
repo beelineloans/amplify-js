@@ -531,5 +531,8 @@
 			"import": "{ uploadData }",
 			"limit": "23.49 kB"
 		}
-	]
+	],
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
+	}
 }

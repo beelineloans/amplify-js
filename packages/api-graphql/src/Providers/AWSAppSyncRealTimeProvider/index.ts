@@ -28,6 +28,7 @@ export interface AWSAppSyncRealTimeProviderOptions {
 	additionalHeaders?: CustomHeaders;
 	additionalCustomHeaders?: Record<string, string>;
 	authToken?: string;
+	host?: string;
 }
 
 interface DataObject extends Record<string, unknown> {

@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2025-05-09)
+
+### Bug Fixes
+
+- **@aws-amplify/datastore-storage-adapter:** remove extra, invalid sqlite mutations again ([#9921](https://github.com/aws-amplify/amplify-js/issues/9921)) ([00923cf](https://github.com/aws-amplify/amplify-js/commit/00923cfaeafcee97a0f54cc6aa04724f7155e75d))
+- **@aws-amplify/datastore-storage-adapter:** SQLite adapter NULL handling and mutation queue management bugs ([#9813](https://github.com/aws-amplify/amplify-js/issues/9813)) ([fe691fd](https://github.com/aws-amplify/amplify-js/commit/fe691fd4f67adc6ac973dd12ca056563d0720d69))
+- **@aws-amplify/datastore-storage-adapter:** SQLiteAdapter fails on required related models ([#10720](https://github.com/aws-amplify/amplify-js/issues/10720)) ([fa7d6c6](https://github.com/aws-amplify/amplify-js/commit/fa7d6c681496dd45d40a2af672f953e0ff372940))
+- **@aws-amplify/datastore:** adds missing fields to items sent through observe/observeQuery ([#9973](https://github.com/aws-amplify/amplify-js/issues/9973)) ([ca2a11b](https://github.com/aws-amplify/amplify-js/commit/ca2a11b5bc987e71ce3344058a4886bf067cb17b))
+- **@aws-amplify/datastore:** strictly define null vs undefined behavior on models ([#11009](https://github.com/aws-amplify/amplify-js/issues/11009)) ([eb8b05f](https://github.com/aws-amplify/amplify-js/commit/eb8b05f844f089e4810b986df9420832c6b68cca)), closes [#10932](https://github.com/aws-amplify/amplify-js/issues/10932)
+- Add module declaration files for datastore-storage-adapter ([#9922](https://github.com/aws-amplify/amplify-js/issues/9922)) ([88b6a1e](https://github.com/aws-amplify/amplify-js/commit/88b6a1e82445c359c930ae40a9028ab250870d74))
+- add warning message when trying to use SQLite with CPK enabled ([#11027](https://github.com/aws-amplify/amplify-js/issues/11027)) ([cae3389](https://github.com/aws-amplify/amplify-js/commit/cae3389e9c41ac74bd58a20f42f58e30bb07cb51))
+- **datastore-storage-adapter:** don't enforce required model fields in sql ([#9166](https://github.com/aws-amplify/amplify-js/issues/9166)) ([fbe1f2e](https://github.com/aws-amplify/amplify-js/commit/fbe1f2ebddb1a155d74e7f45e30a61b95a608af1))
+- **datastore:** crypto random numbers for ulid factory ([#12435](https://github.com/aws-amplify/amplify-js/issues/12435)) ([f405448](https://github.com/aws-amplify/amplify-js/commit/f405448e81a252e5f377d935a9f8d9d5c1532047))
+- **data:** update SQLite utils to use 'instr' instead of 'like' when constructing WHERE conditions from predicates ([#11108](https://github.com/aws-amplify/amplify-js/issues/11108)) ([42d5328](https://github.com/aws-amplify/amplify-js/commit/42d5328f8e142c15b25c086c9455bcd70987e885))
+- Rollback the manual major version changes and change release command to increment the major versions ([#10638](https://github.com/aws-amplify/amplify-js/issues/10638)) ([660e5d9](https://github.com/aws-amplify/amplify-js/commit/660e5d9e7f18c514dc3c88322a1df6b5d5a5e796))
+
+### Features
+
+- **@aws-amplify/datastore:** add SQLite storage adapter option for RN apps ([#8809](https://github.com/aws-amplify/amplify-js/issues/8809)) ([46ee5dd](https://github.com/aws-amplify/amplify-js/commit/46ee5dd91c61f49bad4da8286b2f97c737d96631))
+- **@aws-amplify/datastore:** hasOne CRUD improvements ([#9239](https://github.com/aws-amplify/amplify-js/issues/9239)) ([d521d17](https://github.com/aws-amplify/amplify-js/commit/d521d17c45a246c63c02a29e103e8a3db374c11e))
+- add a typescript coverage report mechanism ([#10551](https://github.com/aws-amplify/amplify-js/issues/10551)) ([8e8df55](https://github.com/aws-amplify/amplify-js/commit/8e8df55b449f8bae2fe962fe282613d1b818cc5a)), closes [#10379](https://github.com/aws-amplify/amplify-js/issues/10379)
+- add data-schema client ([#12552](https://github.com/aws-amplify/amplify-js/issues/12552)) ([922eb86](https://github.com/aws-amplify/amplify-js/commit/922eb86d030a6b50d05da2191a6d6c8f3b40dcdd))
+- Added ExpoSQLiteAdapter and Code Sharing for common files ([#9581](https://github.com/aws-amplify/amplify-js/issues/9581)) ([a8ed3c2](https://github.com/aws-amplify/amplify-js/commit/a8ed3c2fad0c780c8782e1729414afd51ff6b155))
+- change JS target to ES2020 ([#12365](https://github.com/aws-amplify/amplify-js/issues/12365)) ([381b201](https://github.com/aws-amplify/amplify-js/commit/381b2010afb0ca72d392307d4da64af3ca146d6f))
+- **repo:** set up rollup to emit esm and cjs artifacts ([#12522](https://github.com/aws-amplify/amplify-js/issues/12522)) ([903a012](https://github.com/aws-amplify/amplify-js/commit/903a0123e51f69ff3476b6b15aa89a73b750f9dc))
+- Upgrade TypeDoc & rebuild our API documentation ([#13012](https://github.com/aws-amplify/amplify-js/issues/13012)) ([1509592](https://github.com/aws-amplify/amplify-js/commit/1509592c017aa3e63d6c2d3a5c683f9356fb6a75))
+
+### Reverts
+
+- Revert "chore(release): Publish [skip release]" ([241fa11](https://github.com/aws-amplify/amplify-js/commit/241fa1105e177d9e4afe59c40ee92656b87ae542))
+- Revert "chore(release): Publish" (#13027) ([f6f4f42](https://github.com/aws-amplify/amplify-js/commit/f6f4f42befa04ed3c1502fa0adf17c6700abfddf)), closes [#13027](https://github.com/aws-amplify/amplify-js/issues/13027)
+- Revert "chore(repo): use typescript 5.0.2 across workspace" (#12941) ([dc04ba1](https://github.com/aws-amplify/amplify-js/commit/dc04ba18604291d9618a681e7ec4cdb801a355c8)), closes [#12941](https://github.com/aws-amplify/amplify-js/issues/12941)
+- Revert "chore: Upgrade Prettier (#12582)" (#12600) ([cd937f5](https://github.com/aws-amplify/amplify-js/commit/cd937f56bef5f90a4b42638776656faf746c48aa)), closes [#12582](https://github.com/aws-amplify/amplify-js/issues/12582) [#12600](https://github.com/aws-amplify/amplify-js/issues/12600)
+
 ## [2.1.82](https://github.com/aws-amplify/amplify-js/compare/@aws-amplify/datastore-storage-adapter@2.1.81...@aws-amplify/datastore-storage-adapter@2.1.82) (2025-04-28)
 
 **Note:** Version bump only for package @aws-amplify/datastore-storage-adapter

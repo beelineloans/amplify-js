@@ -3,6 +3,59 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.2.0 (2025-05-09)
+
+### Bug Fixes
+
+- [#4311](https://github.com/aws-amplify/amplify-js/issues/4311) Update main entry field to point to CJS builds instead of webpack bundles ([#4678](https://github.com/aws-amplify/amplify-js/issues/4678)) ([54fbdf4](https://github.com/aws-amplify/amplify-js/commit/54fbdf4b1393567735fb7b5f4144db273f1a5f6a))
+- **@aws-amplify/interactions:** fix interactions v3 bugs and refactor type ([#6381](https://github.com/aws-amplify/amplify-js/issues/6381)) ([8c6fb4a](https://github.com/aws-amplify/amplify-js/commit/8c6fb4aefa60b36ed33d89c431e743f674119bde))
+- **@aws-amplify/interactions:** remove `Readable` dependencies ([#6403](https://github.com/aws-amplify/amplify-js/issues/6403)) ([5682f22](https://github.com/aws-amplify/amplify-js/commit/5682f221101de671a3cf906edb43031432735a44))
+- Add files with Amplify.register to sideEffects array ([#6867](https://github.com/aws-amplify/amplify-js/issues/6867)) ([58ddbf8](https://github.com/aws-amplify/amplify-js/commit/58ddbf8811e44695d97b6ab8be8f7cd2a2242921))
+- Add upkeep to platform/framework caches ([#11505](https://github.com/aws-amplify/amplify-js/issues/11505)) ([03aa356](https://github.com/aws-amplify/amplify-js/commit/03aa3560e921f08717594bdf679b62501bc6de77))
+- **aws-amplify-angular:** Angular rollup ([#1441](https://github.com/aws-amplify/amplify-js/issues/1441)) ([eb84e01](https://github.com/aws-amplify/amplify-js/commit/eb84e012397b8ba4ef93083da7ccc52e1b3d39fb))
+- **aws-amplify:** manual version bumps for lerna issue ([9ce5a72](https://github.com/aws-amplify/amplify-js/commit/9ce5a720a659ee01857feadc12f169fdc1c8cbaa))
+- **cache:** export correct module for RN ([#4786](https://github.com/aws-amplify/amplify-js/issues/4786)) ([a15730c](https://github.com/aws-amplify/amplify-js/commit/a15730cc50692d9d31a0f586c3544b3dcdbea659))
+- **core:** bump SDK verion to gamma.2 ([#5909](https://github.com/aws-amplify/amplify-js/issues/5909)) ([3bd2d25](https://github.com/aws-amplify/amplify-js/commit/3bd2d2509c2db59cffd7ac81c08ac4f9ef298198))
+- **deps:** update AWS SDK clients with fast-xml-parser dependency ([#11181](https://github.com/aws-amplify/amplify-js/issues/11181)) ([a05e1dd](https://github.com/aws-amplify/amplify-js/commit/a05e1dd9da7fb7a65f1ad1c78886e095e21a5c5a))
+- Fix SSR & AmplifyOutput types when using Gen2 configuration files ([#13247](https://github.com/aws-amplify/amplify-js/issues/13247)) ([f797dc5](https://github.com/aws-amplify/amplify-js/commit/f797dc539f57a55a325b227d8205813b122d7789))
+- **interactions:** add deprecation announcement for LexV1 module ([#12344](https://github.com/aws-amplify/amplify-js/issues/12344)) ([48856e6](https://github.com/aws-amplify/amplify-js/commit/48856e6a7dac6d3aa509e4f91e7d5af184190f60))
+- **interactions:** align type names and use named params ([#12406](https://github.com/aws-amplify/amplify-js/issues/12406)) ([dc4b91f](https://github.com/aws-amplify/amplify-js/commit/dc4b91f221ed11f1f9b65f38a911c8b27243645e))
+- Lower `tslib` version to improve dependency flattening ([#10588](https://github.com/aws-amplify/amplify-js/issues/10588)) ([a48a17b](https://github.com/aws-amplify/amplify-js/commit/a48a17b1b6adaf09305e338869129b4f7c380fc9))
+- Restore `tslib` dependencies for v5 ([#10512](https://github.com/aws-amplify/amplify-js/issues/10512)) ([b631360](https://github.com/aws-amplify/amplify-js/commit/b6313600557e822f76ddaee8d571d17aa534874c))
+- Rollback the manual major version changes and change release command to increment the major versions ([#10638](https://github.com/aws-amplify/amplify-js/issues/10638)) ([660e5d9](https://github.com/aws-amplify/amplify-js/commit/660e5d9e7f18c514dc3c88322a1df6b5d5a5e796))
+- Run ts coverage check with test ([#11047](https://github.com/aws-amplify/amplify-js/issues/11047)) ([430bedf](https://github.com/aws-amplify/amplify-js/commit/430bedfd0d0618bd0093b488233521356feef787))
+- Update getAmplifyUserAgent to retain original interface ([#11535](https://github.com/aws-amplify/amplify-js/issues/11535)) ([dc84cc8](https://github.com/aws-amplify/amplify-js/commit/dc84cc8bfa7811b5f4f8ac2f7e5ea1b5edc54fe1))
+
+### Features
+
+- **@aws-amplify/core:** [Delivers [#168673137](https://github.com/aws-amplify/amplify-js/issues/168673137)] Migrate core category to aws sdk V3 ([#4077](https://github.com/aws-amplify/amplify-js/issues/4077)) ([beb73a4](https://github.com/aws-amplify/amplify-js/commit/beb73a4b1c051654750f5bdc3b20cde3a3aba37d))
+- **@aws-amplify/interactions @aws-amplify/react @aws-amplify/react-native @aws-amplify/angular @aws-amplify/vue:** Update interactions to include voice ([#2121](https://github.com/aws-amplify/amplify-js/issues/2121)) ([938d2a5](https://github.com/aws-amplify/amplify-js/commit/938d2a5a6617867f62711b97a045b7e266749750))
+- **@aws-amplify/ui-components:** Add Chatbot UI to main ([#6684](https://github.com/aws-amplify/amplify-js/issues/6684)) ([4e25f92](https://github.com/aws-amplify/amplify-js/commit/4e25f923723441c6fb705584fcc3349214806558)), closes [#5024](https://github.com/aws-amplify/amplify-js/issues/5024) [#6648](https://github.com/aws-amplify/amplify-js/issues/6648) [#6652](https://github.com/aws-amplify/amplify-js/issues/6652) [#6678](https://github.com/aws-amplify/amplify-js/issues/6678)
+- add a typescript coverage report mechanism ([#10551](https://github.com/aws-amplify/amplify-js/issues/10551)) ([8e8df55](https://github.com/aws-amplify/amplify-js/commit/8e8df55b449f8bae2fe962fe282613d1b818cc5a)), closes [#10379](https://github.com/aws-amplify/amplify-js/issues/10379)
+- Added Prettier formatting ([4dfd9aa](https://github.com/aws-amplify/amplify-js/commit/4dfd9aa9ab900307c9d17c68448a6ca4aa08fd5a))
+- append amplify user agent to all V3 SDK calls ([#4564](https://github.com/aws-amplify/amplify-js/issues/4564)) ([175d4c3](https://github.com/aws-amplify/amplify-js/commit/175d4c34ccb9cd5674c228db14513827d1c80d3f))
+- change JS target to ES2020 ([#12365](https://github.com/aws-amplify/amplify-js/issues/12365)) ([381b201](https://github.com/aws-amplify/amplify-js/commit/381b2010afb0ca72d392307d4da64af3ca146d6f))
+- **clients:** cognito identity client ([#11213](https://github.com/aws-amplify/amplify-js/issues/11213)) ([67e4017](https://github.com/aws-amplify/amplify-js/commit/67e40171385f02d0c9448fdc3e036d63e009ea34))
+- **clients:** support CN partition by adding DNS suffix resolver ([#11311](https://github.com/aws-amplify/amplify-js/issues/11311)) ([9de2975](https://github.com/aws-amplify/amplify-js/commit/9de297519fdbaaf1e9b4ae98f12aed4137400222))
+- **core:** API detection for 8 framework targets ([#11384](https://github.com/aws-amplify/amplify-js/issues/11384)) ([388f207](https://github.com/aws-amplify/amplify-js/commit/388f2074db0640f2d22aa7cd1a44d8eb8f2301d2))
+- Custom user agent enhancement for api-rest ([#11457](https://github.com/aws-amplify/amplify-js/issues/11457)) ([4315ba0](https://github.com/aws-amplify/amplify-js/commit/4315ba05ad2e4463a4ef19431f20f8d5308cdc62))
+- enable watch mode for builds ([#4358](https://github.com/aws-amplify/amplify-js/issues/4358)) ([055e530](https://github.com/aws-amplify/amplify-js/commit/055e5308efc308ae6beee78f8963bb2f812e1f85))
+- **interactions:** adapt v6 api design ([#12285](https://github.com/aws-amplify/amplify-js/issues/12285)) ([76471b6](https://github.com/aws-amplify/amplify-js/commit/76471b6488efc37d7d0bdc1feb7fcbc97334ec7c))
+- **repo:** set up rollup to emit esm and cjs artifacts ([#12522](https://github.com/aws-amplify/amplify-js/issues/12522)) ([903a012](https://github.com/aws-amplify/amplify-js/commit/903a0123e51f69ff3476b6b15aa89a73b750f9dc))
+- **SSR:** withSSRContext ([#6146](https://github.com/aws-amplify/amplify-js/issues/6146)) ([1cb1afd](https://github.com/aws-amplify/amplify-js/commit/1cb1afd1e56135908dceb2ef6403f0b3e78067fe))
+- **storage:** Integrity changes for storage browser ([#13909](https://github.com/aws-amplify/amplify-js/issues/13909)) ([ec7bf6f](https://github.com/aws-amplify/amplify-js/commit/ec7bf6ff2fb4af84425eca4f2d68c2bef7f49d03)), closes [#13478](https://github.com/aws-amplify/amplify-js/issues/13478) [#13474](https://github.com/aws-amplify/amplify-js/issues/13474)
+- Upgrade TypeDoc & rebuild our API documentation ([#13012](https://github.com/aws-amplify/amplify-js/issues/13012)) ([1509592](https://github.com/aws-amplify/amplify-js/commit/1509592c017aa3e63d6c2d3a5c683f9356fb6a75))
+
+### Reverts
+
+- Revert "chore(release): Publish [skip release]" ([241fa11](https://github.com/aws-amplify/amplify-js/commit/241fa1105e177d9e4afe59c40ee92656b87ae542))
+- Revert "chore(release): Publish" (#13027) ([f6f4f42](https://github.com/aws-amplify/amplify-js/commit/f6f4f42befa04ed3c1502fa0adf17c6700abfddf)), closes [#13027](https://github.com/aws-amplify/amplify-js/issues/13027)
+- Revert "chore(repo): use typescript 5.0.2 across workspace" (#12941) ([dc04ba1](https://github.com/aws-amplify/amplify-js/commit/dc04ba18604291d9618a681e7ec4cdb801a355c8)), closes [#12941](https://github.com/aws-amplify/amplify-js/issues/12941)
+- Revert "chore: bump aws-sdk to 3.4.1 (#7674)" (#7716) ([f142314](https://github.com/aws-amplify/amplify-js/commit/f1423144cf73304f3dc048233b35c831c9a1742d)), closes [#7674](https://github.com/aws-amplify/amplify-js/issues/7674) [#7716](https://github.com/aws-amplify/amplify-js/issues/7716)
+- Revert "Upgrade aws-sdk clients to beta4 (#5575)" (#5577) ([f2dcabb](https://github.com/aws-amplify/amplify-js/commit/f2dcabb78110c0bab84780d045d046fabf97b6f4)), closes [#5575](https://github.com/aws-amplify/amplify-js/issues/5575) [#5577](https://github.com/aws-amplify/amplify-js/issues/5577)
+- Revert "Publish" ([1319d31](https://github.com/aws-amplify/amplify-js/commit/1319d319b69717e76660fbfa6f1a845195c6d635))
+- Revert "chore(release): Publish [ci skip]" ([9b03c49](https://github.com/aws-amplify/amplify-js/commit/9b03c49b0ba5eef09920017386c9fae139b6e0f9))
+
 ## [6.1.21](https://github.com/aws-amplify/amplify-js/compare/@aws-amplify/interactions@6.1.20...@aws-amplify/interactions@6.1.21) (2025-04-28)
 
 **Note:** Version bump only for package @aws-amplify/interactions

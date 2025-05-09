@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.2.0 (2025-05-09)
+
+### Bug Fixes
+
+- **@aws-amplify/api-rest:** Gate usage of FormData, since Node doesn't support it ([#7237](https://github.com/aws-amplify/amplify-js/issues/7237)) ([f9e6774](https://github.com/aws-amplify/amplify-js/commit/f9e6774f5fa7a8100a7dc99b53c563221b4773e7))
+- **@aws-amplify/api-rest:** Improve Clock Drift/Skew Logic ([#8319](https://github.com/aws-amplify/amplify-js/issues/8319)) ([8448b4f](https://github.com/aws-amplify/amplify-js/commit/8448b4fe1f995f0d6056bcb46dd0fb2023fb197d))
+- **@aws-amplify/api-rest:** Pass client FormData to axios ([#6899](https://github.com/aws-amplify/amplify-js/issues/6899)) ([863daba](https://github.com/aws-amplify/amplify-js/commit/863daba34d30b16b2c381a8e4ba9a8379f7d290f))
+- **@aws-amplify/api:** graphql API.cancel fix ([#9578](https://github.com/aws-amplify/amplify-js/issues/9578)) ([a9ae27f](https://github.com/aws-amplify/amplify-js/commit/a9ae27f65e1a782321c0be87556f92d2ee432352))
+- Add files with Amplify.register to sideEffects array ([#6867](https://github.com/aws-amplify/amplify-js/issues/6867)) ([58ddbf8](https://github.com/aws-amplify/amplify-js/commit/58ddbf8811e44695d97b6ab8be8f7cd2a2242921))
+- Add upkeep to platform/framework caches ([#11505](https://github.com/aws-amplify/amplify-js/issues/11505)) ([03aa356](https://github.com/aws-amplify/amplify-js/commit/03aa3560e921f08717594bdf679b62501bc6de77))
+- address feedbacks ([2d6eecf](https://github.com/aws-amplify/amplify-js/commit/2d6eecfa4763a6cfb6aeaabedd49a530c6420dcd))
+- **amazon-cognito-identity-js:** update random implementation ([#7090](https://github.com/aws-amplify/amplify-js/issues/7090)) ([7048453](https://github.com/aws-amplify/amplify-js/commit/70484532da8a9953384b00b223b2b3ba0c0e845e))
+- **api-graphql:** server side iam auth mode is ineffective ([#12992](https://github.com/aws-amplify/amplify-js/issues/12992)) ([e316a2e](https://github.com/aws-amplify/amplify-js/commit/e316a2eb6129a30a16008892e7cdc17aefd914f9))
+- **api-graphql:** update error handling ([#13177](https://github.com/aws-amplify/amplify-js/issues/13177)) ([d4a48f1](https://github.com/aws-amplify/amplify-js/commit/d4a48f1ace550bf478ebbfa41bca8b83d7dd52e4))
+- **api-rest:** omit no credentials error and make unauth request([#12736](https://github.com/aws-amplify/amplify-js/issues/12736)) ([e2824b6](https://github.com/aws-amplify/amplify-js/commit/e2824b68a7de2ba229c6ce8e90ea6724c5590b42))
+- **api-rest:** refactor ajax method to not relying on side effects ([#11498](https://github.com/aws-amplify/amplify-js/issues/11498)) ([17e35b1](https://github.com/aws-amplify/amplify-js/commit/17e35b1cc7cfac8114547a99367a57e2bd180ef8)), closes [#11480](https://github.com/aws-amplify/amplify-js/issues/11480)
+- **api:** overwrite mismatched content type for FormData ([#12720](https://github.com/aws-amplify/amplify-js/issues/12720)) ([58ed2f7](https://github.com/aws-amplify/amplify-js/commit/58ed2f75fb3eba004131fdccca331411731d10c7))
+- **data:** fix library configuration options headers for subscriptions ([#12590](https://github.com/aws-amplify/amplify-js/issues/12590)) ([#12659](https://github.com/aws-amplify/amplify-js/issues/12659)) ([e101cea](https://github.com/aws-amplify/amplify-js/commit/e101ceac6a901e240d574e30909ca4409fe91357))
+- **deps:** fix more implicit deps and add linting ([#14137](https://github.com/aws-amplify/amplify-js/issues/14137)) ([22ca811](https://github.com/aws-amplify/amplify-js/commit/22ca811743f6729d3a00dd71726ff6b5afb44b53))
+- Lower `tslib` version to improve dependency flattening ([#10588](https://github.com/aws-amplify/amplify-js/issues/10588)) ([a48a17b](https://github.com/aws-amplify/amplify-js/commit/a48a17b1b6adaf09305e338869129b4f7c380fc9))
+- remove x-amz-user-agent header from api-rest calls to prevent CORS failures ([#11487](https://github.com/aws-amplify/amplify-js/issues/11487)) ([76b6706](https://github.com/aws-amplify/amplify-js/commit/76b670675b84045890aa7944e6704af87a012b3d))
+- Restore `tslib` dependencies for v5 ([#10512](https://github.com/aws-amplify/amplify-js/issues/10512)) ([b631360](https://github.com/aws-amplify/amplify-js/commit/b6313600557e822f76ddaee8d571d17aa534874c))
+- Rollback the manual major version changes and change release command to increment the major versions ([#10638](https://github.com/aws-amplify/amplify-js/issues/10638)) ([660e5d9](https://github.com/aws-amplify/amplify-js/commit/660e5d9e7f18c514dc3c88322a1df6b5d5a5e796))
+- Run ts coverage check with test ([#11047](https://github.com/aws-amplify/amplify-js/issues/11047)) ([430bedf](https://github.com/aws-amplify/amplify-js/commit/430bedfd0d0618bd0093b488233521356feef787))
+- **storage|aws-amplify:** export server apis from the subpaths ([#11910](https://github.com/aws-amplify/amplify-js/issues/11910)) ([23fa46a](https://github.com/aws-amplify/amplify-js/commit/23fa46a9c714273449861baf12bfa6a2ebd1ce9e))
+- **storage:** Add getProperties user agent action ([#11501](https://github.com/aws-amplify/amplify-js/issues/11501)) ([019b5b1](https://github.com/aws-amplify/amplify-js/commit/019b5b1115bebc92f2c44bbf285d1d916cb08492))
+- **storage:** align cancel behavior with api-rest ([#12239](https://github.com/aws-amplify/amplify-js/issues/12239)) ([f8a7145](https://github.com/aws-amplify/amplify-js/commit/f8a7145f67d9db12fc52608b4202e08c02613feb))
+- update axios ([67316d7](https://github.com/aws-amplify/amplify-js/commit/67316d78fd829b9d4875a25d00719b175738e594))
+
+### Features
+
+- add a typescript coverage report mechanism ([#10551](https://github.com/aws-amplify/amplify-js/issues/10551)) ([8e8df55](https://github.com/aws-amplify/amplify-js/commit/8e8df55b449f8bae2fe962fe282613d1b818cc5a)), closes [#10379](https://github.com/aws-amplify/amplify-js/issues/10379)
+- **api-rest:** configurable retry behavior ([#14303](https://github.com/aws-amplify/amplify-js/issues/14303)) ([65207a6](https://github.com/aws-amplify/amplify-js/commit/65207a668cf66f07932b7f89f38651cbb84b8187))
+- **api-rest:** internal API handling GraphQL requests ([#12138](https://github.com/aws-amplify/amplify-js/issues/12138)) ([3bbd5d9](https://github.com/aws-amplify/amplify-js/commit/3bbd5d91926d90d58fbdab3516ed546c3be7b37c))
+- **api-rest:** support making external promise cancellable ([#12167](https://github.com/aws-amplify/amplify-js/issues/12167)) ([a26f692](https://github.com/aws-amplify/amplify-js/commit/a26f6928f8306d76fc5c8e27c3eeb84539b2d6ed))
+- **api:** expose HTTP response from API errors ([#12835](https://github.com/aws-amplify/amplify-js/issues/12835)) ([38c1d56](https://github.com/aws-amplify/amplify-js/commit/38c1d56973c6318fc63ce0bdba888c2b0136d083))
+- **api:** REST API handlers ([#12172](https://github.com/aws-amplify/amplify-js/issues/12172)) ([8d0489f](https://github.com/aws-amplify/amplify-js/commit/8d0489f0fafad9eb26fc4bd6be97ba13aa345448))
+- **api:** update API config interface ([#12122](https://github.com/aws-amplify/amplify-js/issues/12122)) ([3e17805](https://github.com/aws-amplify/amplify-js/commit/3e1780544f16fc769bb3c7316b413b966c909515))
+- Automatically handle clock drift/skew for API calls ([#5869](https://github.com/aws-amplify/amplify-js/issues/5869)) ([6218ff6](https://github.com/aws-amplify/amplify-js/commit/6218ff62269056f46d65760c3ec61baadb3742f4))
+- **clients:** cognito identity client ([#11213](https://github.com/aws-amplify/amplify-js/issues/11213)) ([67e4017](https://github.com/aws-amplify/amplify-js/commit/67e40171385f02d0c9448fdc3e036d63e009ea34))
+- **clients:** support CN partition by adding DNS suffix resolver ([#11311](https://github.com/aws-amplify/amplify-js/issues/11311)) ([9de2975](https://github.com/aws-amplify/amplify-js/commit/9de297519fdbaaf1e9b4ae98f12aed4137400222))
+- **core:** add amplifyUuid and amplifyUrl with builtin polyfill loader for RN ([a4ad9e0](https://github.com/aws-amplify/amplify-js/commit/a4ad9e09d6098a53f4530d9fa9112c81b409a605))
+- **core:** API detection for 8 framework targets ([#11384](https://github.com/aws-amplify/amplify-js/issues/11384)) ([388f207](https://github.com/aws-amplify/amplify-js/commit/388f2074db0640f2d22aa7cd1a44d8eb8f2301d2))
+- **core:** refactor signer implementation to remove polyfill ([#11319](https://github.com/aws-amplify/amplify-js/issues/11319)) ([1603af3](https://github.com/aws-amplify/amplify-js/commit/1603af38ea7faa163f7fcb92fd09c056454c8a0a)), closes [#11273](https://github.com/aws-amplify/amplify-js/issues/11273) [#11307](https://github.com/aws-amplify/amplify-js/issues/11307) [#11310](https://github.com/aws-amplify/amplify-js/issues/11310) [#11120](https://github.com/aws-amplify/amplify-js/issues/11120) [#11320](https://github.com/aws-amplify/amplify-js/issues/11320)
+- custom user agent core changes for UI handoff ([#11602](https://github.com/aws-amplify/amplify-js/issues/11602)) ([7365c34](https://github.com/aws-amplify/amplify-js/commit/7365c34b28015af199dbfdb3713cc26e096d1213))
+- Custom user agent enhancement for api-rest ([#11457](https://github.com/aws-amplify/amplify-js/issues/11457)) ([4315ba0](https://github.com/aws-amplify/amplify-js/commit/4315ba05ad2e4463a4ef19431f20f8d5308cdc62))
+- library observability improvements ([#14309](https://github.com/aws-amplify/amplify-js/issues/14309)) ([b383885](https://github.com/aws-amplify/amplify-js/commit/b3838851da3c5620d6c1ea7950d16d81b21e073f)), closes [#14230](https://github.com/aws-amplify/amplify-js/issues/14230) [#14237](https://github.com/aws-amplify/amplify-js/issues/14237) [#14259](https://github.com/aws-amplify/amplify-js/issues/14259) [#14251](https://github.com/aws-amplify/amplify-js/issues/14251) [#14296](https://github.com/aws-amplify/amplify-js/issues/14296)
+- **repo:** set up rollup to emit esm and cjs artifacts ([#12522](https://github.com/aws-amplify/amplify-js/issues/12522)) ([903a012](https://github.com/aws-amplify/amplify-js/commit/903a0123e51f69ff3476b6b15aa89a73b750f9dc))
+- **SSR:** withSSRContext ([#6146](https://github.com/aws-amplify/amplify-js/issues/6146)) ([1cb1afd](https://github.com/aws-amplify/amplify-js/commit/1cb1afd1e56135908dceb2ef6403f0b3e78067fe))
+
+### Reverts
+
+- Revert "chore(release): Publish [skip release]" ([241fa11](https://github.com/aws-amplify/amplify-js/commit/241fa1105e177d9e4afe59c40ee92656b87ae542))
+- Revert "chore(release): Publish" (#13027) ([f6f4f42](https://github.com/aws-amplify/amplify-js/commit/f6f4f42befa04ed3c1502fa0adf17c6700abfddf)), closes [#13027](https://github.com/aws-amplify/amplify-js/issues/13027)
+- Revert "chore(repo): use typescript 5.0.2 across workspace" (#12941) ([dc04ba1](https://github.com/aws-amplify/amplify-js/commit/dc04ba18604291d9618a681e7ec4cdb801a355c8)), closes [#12941](https://github.com/aws-amplify/amplify-js/issues/12941)
+
 ## [4.1.4](https://github.com/aws-amplify/amplify-js/compare/@aws-amplify/api-rest@4.1.3...@aws-amplify/api-rest@4.1.4) (2025-04-28)
 
 **Note:** Version bump only for package @aws-amplify/api-rest

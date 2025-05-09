@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2025-05-09)
+
+### Bug Fixes
+
+- Add upkeep to platform/framework caches ([#11505](https://github.com/aws-amplify/amplify-js/issues/11505)) ([03aa356](https://github.com/aws-amplify/amplify-js/commit/03aa3560e921f08717594bdf679b62501bc6de77))
+- **amplifyConfig:** Amplify.configure.category should not allow empty object ([#12540](https://github.com/aws-amplify/amplify-js/issues/12540)) ([17ffbdd](https://github.com/aws-amplify/amplify-js/commit/17ffbdd7f49c38ea038f5aab5dd01c501f97c6b2))
+- **deps:** fix more implicit deps and add linting ([#14137](https://github.com/aws-amplify/amplify-js/issues/14137)) ([22ca811](https://github.com/aws-amplify/amplify-js/commit/22ca811743f6729d3a00dd71726ff6b5afb44b53))
+- **deps:** update AWS SDK clients with fast-xml-parser dependency ([#11181](https://github.com/aws-amplify/amplify-js/issues/11181)) ([a05e1dd](https://github.com/aws-amplify/amplify-js/commit/a05e1dd9da7fb7a65f1ad1c78886e095e21a5c5a))
+- **geo:** Added missing interpolated property to Geo Place ([#10889](https://github.com/aws-amplify/amplify-js/issues/10889)) ([1515cab](https://github.com/aws-amplify/amplify-js/commit/1515cabf1d1dd643cece2bcccf971f2a771ab36c))
+- **geo:** error if mutually exclusive options are given ([67af04a](https://github.com/aws-amplify/amplify-js/commit/67af04a3a4ae6e7d727403437517f1693f672ab6))
+- **geo:** remove 'ensure to' from error message ([ce84b9b](https://github.com/aws-amplify/amplify-js/commit/ce84b9b7a99081b81ebd193bc900eb73a1554169))
+- **geo:** update client-location to fix tslib issue ([#9247](https://github.com/aws-amplify/amplify-js/issues/9247)) ([47f29a3](https://github.com/aws-amplify/amplify-js/commit/47f29a3c73cdf667d70142c8ee367760bd1f86bb))
+- Lower `tslib` version to improve dependency flattening ([#10588](https://github.com/aws-amplify/amplify-js/issues/10588)) ([a48a17b](https://github.com/aws-amplify/amplify-js/commit/a48a17b1b6adaf09305e338869129b4f7c380fc9))
+- React detection and Analytics batch upload ([#11478](https://github.com/aws-amplify/amplify-js/issues/11478)) ([f2b1740](https://github.com/aws-amplify/amplify-js/commit/f2b1740d6ea2b0b25397a02da7f9e6669768b3d7))
+- Rollback the manual major version changes and change release command to increment the major versions ([#10638](https://github.com/aws-amplify/amplify-js/issues/10638)) ([660e5d9](https://github.com/aws-amplify/amplify-js/commit/660e5d9e7f18c514dc3c88322a1df6b5d5a5e796))
+- Update getAmplifyUserAgent to retain original interface ([#11535](https://github.com/aws-amplify/amplify-js/issues/11535)) ([dc84cc8](https://github.com/aws-amplify/amplify-js/commit/dc84cc8bfa7811b5f4f8ac2f7e5ea1b5edc54fe1))
+
+### Features
+
+- **@aws-amplify/geo:** add geofence APIs ([#9743](https://github.com/aws-amplify/amplify-js/issues/9743)) ([c1ea4e1](https://github.com/aws-amplify/amplify-js/commit/c1ea4e134807e54ed7db8a17ca4fd8703781a20d)), closes [#9278](https://github.com/aws-amplify/amplify-js/issues/9278) [#2](https://github.com/aws-amplify/amplify-js/issues/2) [#9309](https://github.com/aws-amplify/amplify-js/issues/9309) [#9310](https://github.com/aws-amplify/amplify-js/issues/9310) [#9312](https://github.com/aws-amplify/amplify-js/issues/9312) [#9314](https://github.com/aws-amplify/amplify-js/issues/9314) [#9670](https://github.com/aws-amplify/amplify-js/issues/9670)
+- **@aws-amplify/geo:** searchForSuggestions API ([#9516](https://github.com/aws-amplify/amplify-js/issues/9516)) ([bb60060](https://github.com/aws-amplify/amplify-js/commit/bb60060d30c7463d1893b7678ebc18e959b46990))
+- add a typescript coverage report mechanism ([#10551](https://github.com/aws-amplify/amplify-js/issues/10551)) ([8e8df55](https://github.com/aws-amplify/amplify-js/commit/8e8df55b449f8bae2fe962fe282613d1b818cc5a)), closes [#10379](https://github.com/aws-amplify/amplify-js/issues/10379)
+- **core:** API detection for 8 framework targets ([#11384](https://github.com/aws-amplify/amplify-js/issues/11384)) ([388f207](https://github.com/aws-amplify/amplify-js/commit/388f2074db0640f2d22aa7cd1a44d8eb8f2301d2))
+- custom user agent core changes for UI handoff ([#11602](https://github.com/aws-amplify/amplify-js/issues/11602)) ([7365c34](https://github.com/aws-amplify/amplify-js/commit/7365c34b28015af199dbfdb3713cc26e096d1213))
+- **Geo:** add Geo category initial scaffolding - Geo milestone 1 - PR 1/6 ([#8615](https://github.com/aws-amplify/amplify-js/issues/8615)) ([81afbcf](https://github.com/aws-amplify/amplify-js/commit/81afbcfc3ba99807853d915032f1a97746fdd37f))
+- **Geo:** add Geo class and amazonLocationServicesProvider - Geo milestone 1 - PR 3/6 ([#8618](https://github.com/aws-amplify/amplify-js/issues/8618)) ([4c1c1fe](https://github.com/aws-amplify/amplify-js/commit/4c1c1fe786f2a4b1d7e1260491357a248dd6d084))
+- **geo:** add region to Amazon Location Service MapStyle ([#8736](https://github.com/aws-amplify/amplify-js/issues/8736)) ([#8745](https://github.com/aws-amplify/amplify-js/issues/8745)) ([21c95b2](https://github.com/aws-amplify/amplify-js/commit/21c95b2779c0973a6e012570b19bd40e8961e01e))
+- **Geo:** getAvailableMaps and getDefaultMap - Geo milestone 1 - PR 4 ([#8620](https://github.com/aws-amplify/amplify-js/issues/8620)) ([229f93e](https://github.com/aws-amplify/amplify-js/commit/229f93edf1bc07de26aebe28f26f3066d3e31a74))
+- **Geo:** searchByCoordinates - Geo milestone 1 - PR 6 ([#8622](https://github.com/aws-amplify/amplify-js/issues/8622)) ([ae725c0](https://github.com/aws-amplify/amplify-js/commit/ae725c0f2d55ba95d4ecc76e46506a888e6b67c5))
+- **Geo:** searchByText - Geo milestone 1 - PR 5 ([#8621](https://github.com/aws-amplify/amplify-js/issues/8621)) ([5346ae1](https://github.com/aws-amplify/amplify-js/commit/5346ae17dcf5672b3c25c46f483af53d5f5dfc93))
+- **geo:** support Language options in map searches ([#11178](https://github.com/aws-amplify/amplify-js/issues/11178)) ([1477488](https://github.com/aws-amplify/amplify-js/commit/1477488a1124459d0594ab96e90140201a3b15d4))
+- **Geo:** update aws-amplify/core - Geo milestone 1 - PR 2/6 ([#8617](https://github.com/aws-amplify/amplify-js/issues/8617)) ([3a83893](https://github.com/aws-amplify/amplify-js/commit/3a8389388ebe7a521d0b78c58e24d91b53db4799))
+- **Geo:** update types latitude <=> longitude ([5a8bebb](https://github.com/aws-amplify/amplify-js/commit/5a8bebb24945dcb3a64098407c17fa9195802191))
+- **repo:** set up rollup to emit esm and cjs artifacts ([#12522](https://github.com/aws-amplify/amplify-js/issues/12522)) ([903a012](https://github.com/aws-amplify/amplify-js/commit/903a0123e51f69ff3476b6b15aa89a73b750f9dc))
+- Upgrade TypeDoc & rebuild our API documentation ([#13012](https://github.com/aws-amplify/amplify-js/issues/13012)) ([1509592](https://github.com/aws-amplify/amplify-js/commit/1509592c017aa3e63d6c2d3a5c683f9356fb6a75))
+
+### Reverts
+
+- Revert "chore(release): Publish [skip release]" ([241fa11](https://github.com/aws-amplify/amplify-js/commit/241fa1105e177d9e4afe59c40ee92656b87ae542))
+- Revert "chore(release): Publish" (#13027) ([f6f4f42](https://github.com/aws-amplify/amplify-js/commit/f6f4f42befa04ed3c1502fa0adf17c6700abfddf)), closes [#13027](https://github.com/aws-amplify/amplify-js/issues/13027)
+- Revert "chore(repo): use typescript 5.0.2 across workspace" (#12941) ([dc04ba1](https://github.com/aws-amplify/amplify-js/commit/dc04ba18604291d9618a681e7ec4cdb801a355c8)), closes [#12941](https://github.com/aws-amplify/amplify-js/issues/12941)
+- Revert "chore: Upgrade Prettier (#12582)" (#12600) ([cd937f5](https://github.com/aws-amplify/amplify-js/commit/cd937f56bef5f90a4b42638776656faf746c48aa)), closes [#12582](https://github.com/aws-amplify/amplify-js/issues/12582) [#12600](https://github.com/aws-amplify/amplify-js/issues/12600)
+- Revert "feat: custom user agent Geo changes for UI handoff (#11632)" ([ba2ae71](https://github.com/aws-amplify/amplify-js/commit/ba2ae7183b096fac71e5d4ef9a5c160d11202841)), closes [#11632](https://github.com/aws-amplify/amplify-js/issues/11632)
+- Revert "feat(@aws-amplify/geo): searchForSuggestions API (#9516)" (#9747) ([a1640db](https://github.com/aws-amplify/amplify-js/commit/a1640db6a3064afed060a325cdd5df5012b8409f)), closes [#9516](https://github.com/aws-amplify/amplify-js/issues/9516) [#9747](https://github.com/aws-amplify/amplify-js/issues/9747)
+
 ## [3.0.80](https://github.com/aws-amplify/amplify-js/compare/@aws-amplify/geo@3.0.79...@aws-amplify/geo@3.0.80) (2025-04-28)
 
 **Note:** Version bump only for package @aws-amplify/geo

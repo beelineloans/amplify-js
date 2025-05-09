@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2025-05-09)
+
+### Bug Fixes
+
+- add module loader for web browser native module ([#12519](https://github.com/aws-amplify/amplify-js/issues/12519)) ([7dde343](https://github.com/aws-amplify/amplify-js/commit/7dde34332397efc47a174122df0a6efc24b61296))
+- Move native module loader type assertion for accuracy ([#12542](https://github.com/aws-amplify/amplify-js/issues/12542)) ([758169f](https://github.com/aws-amplify/amplify-js/commit/758169f4b63e1d071c8754076f364d49b0a9de6d))
+- **notifications:** Duplicate types from optional packages ([#12446](https://github.com/aws-amplify/amplify-js/issues/12446)) ([#12452](https://github.com/aws-amplify/amplify-js/issues/12452)) ([6a1a0cb](https://github.com/aws-amplify/amplify-js/commit/6a1a0cb52001fb1ce6182b6a728fa515585b9b3a))
+- **react-native:** Update namespaces to be unique ([#12510](https://github.com/aws-amplify/amplify-js/issues/12510)) ([e1d88c2](https://github.com/aws-amplify/amplify-js/commit/e1d88c2eee75ed28a33cc9e3354fc5af7ab1549a))
+- **react-native:** wrong package name used in the load error info ([#12342](https://github.com/aws-amplify/amplify-js/issues/12342)) ([68dffe2](https://github.com/aws-amplify/amplify-js/commit/68dffe2841f18df98192792a2bba630a9c717e37))
+
+### Features
+
+- **core:** add amplifyUuid and amplifyUrl with builtin polyfill loader for RN ([a4ad9e0](https://github.com/aws-amplify/amplify-js/commit/a4ad9e09d6098a53f4530d9fa9112c81b409a605))
+- **notifications:** Refactor push notification to be functional ([#12305](https://github.com/aws-amplify/amplify-js/issues/12305)) ([8eb24ad](https://github.com/aws-amplify/amplify-js/commit/8eb24add53c0dc188d7331a9c49cd01073bbc1f5)), closes [#12301](https://github.com/aws-amplify/amplify-js/issues/12301) [#12292](https://github.com/aws-amplify/amplify-js/issues/12292) [#12276](https://github.com/aws-amplify/amplify-js/issues/12276) [#12294](https://github.com/aws-amplify/amplify-js/issues/12294) [#12310](https://github.com/aws-amplify/amplify-js/issues/12310) [#12304](https://github.com/aws-amplify/amplify-js/issues/12304)
+- Pinpoint configureAutoTrack & tracker migration ([#12322](https://github.com/aws-amplify/amplify-js/issues/12322)) ([c5ca240](https://github.com/aws-amplify/amplify-js/commit/c5ca240faf6e94bdb4c709ff434253096879d573))
+- **react-native,core,storage:** add polyfill loaders ([1905829](https://github.com/aws-amplify/amplify-js/commit/1905829e58531e606210740b1bd889bee0ef7e21))
+- **react-native:** add getDeviceName util ([#13015](https://github.com/aws-amplify/amplify-js/issues/13015)) ([36b5d1e](https://github.com/aws-amplify/amplify-js/commit/36b5d1ef6c6151edfe26213a03eb4a1051058ca4))
+- **react-native:** add loadBase64 module loader ([#12235](https://github.com/aws-amplify/amplify-js/issues/12235)) ([256c949](https://github.com/aws-amplify/amplify-js/commit/256c949650d5d057a65e9a8caf129e0feed81f96))
+- **react-native:** add moduleLoaders ([1bd0faf](https://github.com/aws-amplify/amplify-js/commit/1bd0faf75602e48a42bb03f8d09c028ed812ed68))
+- **react-native:** setup package + big int native module ([5748445](https://github.com/aws-amplify/amplify-js/commit/5748445d1bf939f305a130e67c27a99cf1ab12c8))
+- **repo:** set up rollup to emit esm and cjs artifacts ([#12522](https://github.com/aws-amplify/amplify-js/issues/12522)) ([903a012](https://github.com/aws-amplify/amplify-js/commit/903a0123e51f69ff3476b6b15aa89a73b750f9dc))
+
+### Reverts
+
+- Revert "chore(release): Publish [skip release]" ([241fa11](https://github.com/aws-amplify/amplify-js/commit/241fa1105e177d9e4afe59c40ee92656b87ae542))
+- Revert "chore(release): Publish" (#13027) ([f6f4f42](https://github.com/aws-amplify/amplify-js/commit/f6f4f42befa04ed3c1502fa0adf17c6700abfddf)), closes [#13027](https://github.com/aws-amplify/amplify-js/issues/13027)
+- Revert "chore(repo): use typescript 5.0.2 across workspace" (#12941) ([dc04ba1](https://github.com/aws-amplify/amplify-js/commit/dc04ba18604291d9618a681e7ec4cdb801a355c8)), closes [#12941](https://github.com/aws-amplify/amplify-js/issues/12941)
+
 ## [1.1.9](https://github.com/aws-amplify/amplify-js/compare/@aws-amplify/react-native@1.1.8...@aws-amplify/react-native@1.1.9) (2025-04-28)
 
 **Note:** Version bump only for package @aws-amplify/react-native

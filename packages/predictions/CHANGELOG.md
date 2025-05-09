@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.2.0 (2025-05-09)
+
+### Bug Fixes
+
+- [#4311](https://github.com/aws-amplify/amplify-js/issues/4311) Update main entry field to point to CJS builds instead of webpack bundles ([#4678](https://github.com/aws-amplify/amplify-js/issues/4678)) ([54fbdf4](https://github.com/aws-amplify/amplify-js/commit/54fbdf4b1393567735fb7b5f4144db273f1a5f6a))
+- **@aws-amplify/predictions:** decode parsed s3object name ([#6129](https://github.com/aws-amplify/amplify-js/issues/6129)) ([2224a5a](https://github.com/aws-amplify/amplify-js/commit/2224a5abeb125c5a27c0a5970153b3381750cbbb))
+- **@aws-amplify/predictions:** decode Uint8Array as UTF-8 ([#7449](https://github.com/aws-amplify/amplify-js/issues/7449)) ([b3761ae](https://github.com/aws-amplify/amplify-js/commit/b3761aea625e4e1c266d5170a6cdc247eaa54bba))
+- **@aws-amplify/predictions:** Downsizing sample for some language in speech to text ([#7835](https://github.com/aws-amplify/amplify-js/issues/7835)) ([bc5a21f](https://github.com/aws-amplify/amplify-js/commit/bc5a21fcff0a326d79ddf41651a8997165d89da3)), closes [#6921](https://github.com/aws-amplify/amplify-js/issues/6921)
+- **@aws-amplify/predictions:** Logger should be configured with correct category name ([#4069](https://github.com/aws-amplify/amplify-js/issues/4069)) ([a20f9b7](https://github.com/aws-amplify/amplify-js/commit/a20f9b7d6da6ce5b7651f63e2ddd951106650714))
+- **@aws-amplify/predictions:** Logger should be configured with correct category name ([#4069](https://github.com/aws-amplify/amplify-js/issues/4069)) ([0b7ec21](https://github.com/aws-amplify/amplify-js/commit/0b7ec212960e87d88b30ef8bf7028f19f041dac1))
+- **@aws-amplify/predictions:** Missing return in AmazonAIConvertPredictionsProvider.ts ([#7803](https://github.com/aws-amplify/amplify-js/issues/7803)) ([ad2dd86](https://github.com/aws-amplify/amplify-js/commit/ad2dd864ffbe3bc5c620c3078f82805a4ed83439))
+- **@aws-amplify/predictions:** update detectFacesCommand parameters to include all facial attributes (including Emotions types) in the result ([#8095](https://github.com/aws-amplify/amplify-js/issues/8095)) ([520469b](https://github.com/aws-amplify/amplify-js/commit/520469b65c0ed2800931d8e286cbe21fc6518c91))
+- Add files with Amplify.register to sideEffects array ([#6867](https://github.com/aws-amplify/amplify-js/issues/6867)) ([58ddbf8](https://github.com/aws-amplify/amplify-js/commit/58ddbf8811e44695d97b6ab8be8f7cd2a2242921))
+- bump package versions ([#13254](https://github.com/aws-amplify/amplify-js/issues/13254)) ([aa490b9](https://github.com/aws-amplify/amplify-js/commit/aa490b9bcbd2a442d9726937cfa59ef8b7859306))
+- **cache:** export correct module for RN ([#4786](https://github.com/aws-amplify/amplify-js/issues/4786)) ([a15730c](https://github.com/aws-amplify/amplify-js/commit/a15730cc50692d9d31a0f586c3544b3dcdbea659))
+- Codescanning alerts ([#11159](https://github.com/aws-amplify/amplify-js/issues/11159)) ([b19e0ba](https://github.com/aws-amplify/amplify-js/commit/b19e0bab948d995b70fb98ad5d935483b3e15d8d))
+- **core:** bump SDK verion to gamma.2 ([#5909](https://github.com/aws-amplify/amplify-js/issues/5909)) ([3bd2d25](https://github.com/aws-amplify/amplify-js/commit/3bd2d2509c2db59cffd7ac81c08ac4f9ef298198))
+- **deps:** update AWS SDK clients with fast-xml-parser dependency ([#11181](https://github.com/aws-amplify/amplify-js/issues/11181)) ([a05e1dd](https://github.com/aws-amplify/amplify-js/commit/a05e1dd9da7fb7a65f1ad1c78886e095e21a5c5a))
+- Lower `tslib` version to improve dependency flattening ([#10588](https://github.com/aws-amplify/amplify-js/issues/10588)) ([a48a17b](https://github.com/aws-amplify/amplify-js/commit/a48a17b1b6adaf09305e338869129b4f7c380fc9))
+- **predictions:** Refactor shared identify user agent ([#11522](https://github.com/aws-amplify/amplify-js/issues/11522)) ([f95d10d](https://github.com/aws-amplify/amplify-js/commit/f95d10d828c603bdfeecd14b2af9eb4578433ff3))
+- require cycles in various packages ([#5372](https://github.com/aws-amplify/amplify-js/issues/5372)) ([b48c26d](https://github.com/aws-amplify/amplify-js/commit/b48c26d198cc25dd92f1515ddf2a97deec5c9783))
+- Rollback the manual major version changes and change release command to increment the major versions ([#10638](https://github.com/aws-amplify/amplify-js/issues/10638)) ([660e5d9](https://github.com/aws-amplify/amplify-js/commit/660e5d9e7f18c514dc3c88322a1df6b5d5a5e796))
+- Run ts coverage check with test ([#11047](https://github.com/aws-amplify/amplify-js/issues/11047)) ([430bedf](https://github.com/aws-amplify/amplify-js/commit/430bedfd0d0618bd0093b488233521356feef787))
+- Update AmazonAIConvertPredictionsProvider.ts ([#11453](https://github.com/aws-amplify/amplify-js/issues/11453)) ([129e35f](https://github.com/aws-amplify/amplify-js/commit/129e35f5f52db01eb4de90b7eeb9d76e372147a6))
+- Update getAmplifyUserAgent to retain original interface ([#11535](https://github.com/aws-amplify/amplify-js/issues/11535)) ([dc84cc8](https://github.com/aws-amplify/amplify-js/commit/dc84cc8bfa7811b5f4f8ac2f7e5ea1b5edc54fe1))
+- Use exact version of the [@aws-sdk](https://github.com/aws-sdk) V3 packages ([#4241](https://github.com/aws-amplify/amplify-js/issues/4241)) ([e12a9a4](https://github.com/aws-amplify/amplify-js/commit/e12a9a490c35a495101bad2352907c8a7e2255b5))
+
+### Features
+
+- add a typescript coverage report mechanism ([#10551](https://github.com/aws-amplify/amplify-js/issues/10551)) ([8e8df55](https://github.com/aws-amplify/amplify-js/commit/8e8df55b449f8bae2fe962fe282613d1b818cc5a)), closes [#10379](https://github.com/aws-amplify/amplify-js/issues/10379)
+- Add custom user agent enhancements for Predictions ([#11437](https://github.com/aws-amplify/amplify-js/issues/11437)) ([424e9d4](https://github.com/aws-amplify/amplify-js/commit/424e9d46c9b218401472123c0c0d5cd240afe00d))
+- Added Prettier formatting ([4dfd9aa](https://github.com/aws-amplify/amplify-js/commit/4dfd9aa9ab900307c9d17c68448a6ca4aa08fd5a))
+- append amplify user agent to all V3 SDK calls ([#4564](https://github.com/aws-amplify/amplify-js/issues/4564)) ([175d4c3](https://github.com/aws-amplify/amplify-js/commit/175d4c34ccb9cd5674c228db14513827d1c80d3f))
+- **core:** API detection for 8 framework targets ([#11384](https://github.com/aws-amplify/amplify-js/issues/11384)) ([388f207](https://github.com/aws-amplify/amplify-js/commit/388f2074db0640f2d22aa7cd1a44d8eb8f2301d2))
+- Custom user agent enhancement for api-rest ([#11457](https://github.com/aws-amplify/amplify-js/issues/11457)) ([4315ba0](https://github.com/aws-amplify/amplify-js/commit/4315ba05ad2e4463a4ef19431f20f8d5308cdc62))
+- enable watch mode for builds ([#4358](https://github.com/aws-amplify/amplify-js/issues/4358)) ([055e530](https://github.com/aws-amplify/amplify-js/commit/055e5308efc308ae6beee78f8963bb2f812e1f85))
+- integrate predictions with v6 ([#12313](https://github.com/aws-amplify/amplify-js/issues/12313)) ([80b63ee](https://github.com/aws-amplify/amplify-js/commit/80b63ee4a4a6b0db45eb7f229438bbbcf067dba8)), closes [#11983](https://github.com/aws-amplify/amplify-js/issues/11983) [#12193](https://github.com/aws-amplify/amplify-js/issues/12193) [#12237](https://github.com/aws-amplify/amplify-js/issues/12237) [#12266](https://github.com/aws-amplify/amplify-js/issues/12266) [#12312](https://github.com/aws-amplify/amplify-js/issues/12312)
+- **predictions:** specify identifyEntity metadata type ([#12470](https://github.com/aws-amplify/amplify-js/issues/12470)) ([18f8976](https://github.com/aws-amplify/amplify-js/commit/18f89760abfd8c8149dd3ac43411fd13a15f8ea8))
+- prep predictions for publish ([#12441](https://github.com/aws-amplify/amplify-js/issues/12441)) ([54633aa](https://github.com/aws-amplify/amplify-js/commit/54633aaada686c185f6ac8fe4da5af5adc85400c))
+- **repo:** set up rollup to emit esm and cjs artifacts ([#12522](https://github.com/aws-amplify/amplify-js/issues/12522)) ([903a012](https://github.com/aws-amplify/amplify-js/commit/903a0123e51f69ff3476b6b15aa89a73b750f9dc))
+- **SSR:** withSSRContext ([#6146](https://github.com/aws-amplify/amplify-js/issues/6146)) ([1cb1afd](https://github.com/aws-amplify/amplify-js/commit/1cb1afd1e56135908dceb2ef6403f0b3e78067fe))
+- **storage:** add getProperties API ([#11469](https://github.com/aws-amplify/amplify-js/issues/11469)) ([f47d472](https://github.com/aws-amplify/amplify-js/commit/f47d472ea021dadb1a04d03295c3c6065155f0c0))
+- **storage:** add validateObjectExistence option in Get API ([#11154](https://github.com/aws-amplify/amplify-js/issues/11154)) ([8005225](https://github.com/aws-amplify/amplify-js/commit/8005225b929a2cef50fd55d6e67b9057f58868fc))
+- Upgrade TypeDoc & rebuild our API documentation ([#13012](https://github.com/aws-amplify/amplify-js/issues/13012)) ([1509592](https://github.com/aws-amplify/amplify-js/commit/1509592c017aa3e63d6c2d3a5c683f9356fb6a75))
+
+### Reverts
+
+- Revert "chore(release): Publish [skip release]" ([241fa11](https://github.com/aws-amplify/amplify-js/commit/241fa1105e177d9e4afe59c40ee92656b87ae542))
+- Revert "chore(release): Publish" (#13027) ([f6f4f42](https://github.com/aws-amplify/amplify-js/commit/f6f4f42befa04ed3c1502fa0adf17c6700abfddf)), closes [#13027](https://github.com/aws-amplify/amplify-js/issues/13027)
+- Revert "chore(repo): use typescript 5.0.2 across workspace" (#12941) ([dc04ba1](https://github.com/aws-amplify/amplify-js/commit/dc04ba18604291d9618a681e7ec4cdb801a355c8)), closes [#12941](https://github.com/aws-amplify/amplify-js/issues/12941)
+- Revert "chore: Upgrade Prettier (#12582)" (#12600) ([cd937f5](https://github.com/aws-amplify/amplify-js/commit/cd937f56bef5f90a4b42638776656faf746c48aa)), closes [#12582](https://github.com/aws-amplify/amplify-js/issues/12582) [#12600](https://github.com/aws-amplify/amplify-js/issues/12600)
+- Revert "feat: custom user agent Geo changes for UI handoff (#11632)" ([ba2ae71](https://github.com/aws-amplify/amplify-js/commit/ba2ae7183b096fac71e5d4ef9a5c160d11202841)), closes [#11632](https://github.com/aws-amplify/amplify-js/issues/11632)
+- Revert "feat: custom user agent Storage changes for UI handoff (#11627)" ([288a3bb](https://github.com/aws-amplify/amplify-js/commit/288a3bbd5d99ce46e9f085a107183b3dffb8f76e)), closes [#11627](https://github.com/aws-amplify/amplify-js/issues/11627)
+- Revert "feat: custom user agent InAppMessaging changes for UI handoff (#11639)" ([2f0b16b](https://github.com/aws-amplify/amplify-js/commit/2f0b16bd15fea1a46a723d1ebfda00d3de2b56b0)), closes [#11639](https://github.com/aws-amplify/amplify-js/issues/11639)
+- Revert "feat(storage): getProperties API (#11378)" ([7179636](https://github.com/aws-amplify/amplify-js/commit/7179636b183282c299304501cb5aad2cee942a86)), closes [#11378](https://github.com/aws-amplify/amplify-js/issues/11378)
+- Revert "chore: bump aws-sdk to 3.4.1 (#7674)" (#7716) ([f142314](https://github.com/aws-amplify/amplify-js/commit/f1423144cf73304f3dc048233b35c831c9a1742d)), closes [#7674](https://github.com/aws-amplify/amplify-js/issues/7674) [#7716](https://github.com/aws-amplify/amplify-js/issues/7716)
+- Revert "Upgrade aws-sdk clients to beta4 (#5575)" (#5577) ([f2dcabb](https://github.com/aws-amplify/amplify-js/commit/f2dcabb78110c0bab84780d045d046fabf97b6f4)), closes [#5575](https://github.com/aws-amplify/amplify-js/issues/5575) [#5577](https://github.com/aws-amplify/amplify-js/issues/5577)
+- uuid dependency upgrade ([#9159](https://github.com/aws-amplify/amplify-js/issues/9159)) ([4ef8aa9](https://github.com/aws-amplify/amplify-js/commit/4ef8aa9c7c25dbe921fd02b6205b8defb93fbaec))
+
 ## [6.1.55](https://github.com/aws-amplify/amplify-js/compare/@aws-amplify/predictions@6.1.54...@aws-amplify/predictions@6.1.55) (2025-04-28)
 
 **Note:** Version bump only for package @aws-amplify/predictions

@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2025-05-09)
+
+### Bug Fixes
+
+- add module loader for web browser native module ([#12519](https://github.com/aws-amplify/amplify-js/issues/12519)) ([7dde343](https://github.com/aws-amplify/amplify-js/commit/7dde34332397efc47a174122df0a6efc24b61296))
+- **react-native:** Update namespaces to be unique ([#12510](https://github.com/aws-amplify/amplify-js/issues/12510)) ([e1d88c2](https://github.com/aws-amplify/amplify-js/commit/e1d88c2eee75ed28a33cc9e3354fc5af7ab1549a))
+- remove unused nativeEventEmitter ([#12541](https://github.com/aws-amplify/amplify-js/issues/12541)) ([852e91f](https://github.com/aws-amplify/amplify-js/commit/852e91fbf8aab30f491c12996a2b30fe452bd2af))
+- **rtn-web-browser:** prevent CustomTab to show in recent used app ([#13847](https://github.com/aws-amplify/amplify-js/issues/13847)) ([c586b7b](https://github.com/aws-amplify/amplify-js/commit/c586b7b1d243df4cdaf5a4fe15deeac545639b24))
+- **rtn-web-browser:** signInWithRedirect needs to be called twice on Android ([b473ce3](https://github.com/aws-amplify/amplify-js/commit/b473ce34bac46c4bec6226e4a62f078dbd75fb94))
+- **web-browser:** pass callbackURLScheme to auth session ([#12155](https://github.com/aws-amplify/amplify-js/issues/12155)) ([7f60abd](https://github.com/aws-amplify/amplify-js/commit/7f60abda8e5d1f12a6acb99d0fca02fe2079341c))
+
+### Features
+
+- add ability to set ephemeral session ([#12202](https://github.com/aws-amplify/amplify-js/issues/12202)) ([fcf47a0](https://github.com/aws-amplify/amplify-js/commit/fcf47a030aba2ffd2847ede879b44fe5c6dee5ad))
+- add web browser native module ([#12036](https://github.com/aws-amplify/amplify-js/issues/12036)) ([6491191](https://github.com/aws-amplify/amplify-js/commit/649119112b6f422bc7eb07457e90adee95e791f3))
+- **auth:** HostedUI oidc signout ([#13512](https://github.com/aws-amplify/amplify-js/issues/13512)) ([e8fb997](https://github.com/aws-amplify/amplify-js/commit/e8fb9973f8e3e3490619416a778ec1460cafaf9a)), closes [#13712](https://github.com/aws-amplify/amplify-js/issues/13712) [#13736](https://github.com/aws-amplify/amplify-js/issues/13736)
+- **repo:** set up rollup to emit esm and cjs artifacts ([#12522](https://github.com/aws-amplify/amplify-js/issues/12522)) ([903a012](https://github.com/aws-amplify/amplify-js/commit/903a0123e51f69ff3476b6b15aa89a73b750f9dc))
+- Update signInWithRedirect to work with RN ([#12144](https://github.com/aws-amplify/amplify-js/issues/12144)) ([e90c05b](https://github.com/aws-amplify/amplify-js/commit/e90c05b1696870443b3bfb4846205a12926a9252))
+
+### Reverts
+
+- Revert "chore(release): Publish" (#13027) ([f6f4f42](https://github.com/aws-amplify/amplify-js/commit/f6f4f42befa04ed3c1502fa0adf17c6700abfddf)), closes [#13027](https://github.com/aws-amplify/amplify-js/issues/13027)
+- Revert "chore(repo): use typescript 5.0.2 across workspace" (#12941) ([dc04ba1](https://github.com/aws-amplify/amplify-js/commit/dc04ba18604291d9618a681e7ec4cdb801a355c8)), closes [#12941](https://github.com/aws-amplify/amplify-js/issues/12941)
+
 ## [1.1.3](https://github.com/aws-amplify/amplify-js/compare/@aws-amplify/rtn-web-browser@1.1.2...@aws-amplify/rtn-web-browser@1.1.3) (2025-04-28)
 
 **Note:** Version bump only for package @aws-amplify/rtn-web-browser

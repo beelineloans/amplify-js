@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2025-05-09)
+
+### Features
+
+- **react-native:** setup package + big int native module ([5748445](https://github.com/beelineloans/amplify-js/commit/5748445d1bf939f305a130e67c27a99cf1ab12c8))
+
+### Reverts
+
+- Revert "chore(release): Publish [skip release]" ([241fa11](https://github.com/beelineloans/amplify-js/commit/241fa1105e177d9e4afe59c40ee92656b87ae542))
+- Revert "chore(release): Publish" (#13027) ([f6f4f42](https://github.com/beelineloans/amplify-js/commit/f6f4f42befa04ed3c1502fa0adf17c6700abfddf)), closes [#13027](https://github.com/beelineloans/amplify-js/issues/13027)
+
 ## [0.0.29](https://github.com/aws-amplify/amplify-js/compare/@aws-amplify/react-native-example@0.0.28...@aws-amplify/react-native-example@0.0.29) (2025-04-09)
 
 **Note:** Version bump only for package @aws-amplify/react-native-example

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-05-09)
+
+### Bug Fixes
+
+- bump package versions ([#13254](https://github.com/beelineloans/amplify-js/issues/13254)) ([aa490b9](https://github.com/beelineloans/amplify-js/commit/aa490b9bcbd2a442d9726937cfa59ef8b7859306))
+- **tsc-compliance:** Set skipLibCheck flag true for tsc compliance skipLibCheck test ([#14257](https://github.com/beelineloans/amplify-js/issues/14257)) ([a7df116](https://github.com/beelineloans/amplify-js/commit/a7df1165e5df4dbaf3fae9091483056323463c3e))
+
+### Features
+
+- Update signInWithRedirect to work with RN ([#12144](https://github.com/beelineloans/amplify-js/issues/12144)) ([e90c05b](https://github.com/beelineloans/amplify-js/commit/e90c05b1696870443b3bfb4846205a12926a9252))
+
+### Reverts
+
+- Revert "chore(release): Publish [skip release]" ([241fa11](https://github.com/beelineloans/amplify-js/commit/241fa1105e177d9e4afe59c40ee92656b87ae542))
+- Revert "chore(release): Publish" (#13027) ([f6f4f42](https://github.com/beelineloans/amplify-js/commit/f6f4f42befa04ed3c1502fa0adf17c6700abfddf)), closes [#13027](https://github.com/beelineloans/amplify-js/issues/13027)
+
 ## [0.1.85](https://github.com/aws-amplify/amplify-js/compare/tsc-compliance-test@0.1.84...tsc-compliance-test@0.1.85) (2025-04-28)
 
 **Note:** Version bump only for package tsc-compliance-test

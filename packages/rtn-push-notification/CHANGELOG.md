@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2025-05-09)
+
+### Bug Fixes
+
+- **deps:** fix more implicit deps and add linting ([#14137](https://github.com/aws-amplify/amplify-js/issues/14137)) ([22ca811](https://github.com/aws-amplify/amplify-js/commit/22ca811743f6729d3a00dd71726ff6b5afb44b53))
+- **notifications:** add notifications as dependency to aws-amplify ([#12199](https://github.com/aws-amplify/amplify-js/issues/12199)) ([9743838](https://github.com/aws-amplify/amplify-js/commit/97438380688e1a4f87a7bb5b97b2612e6d718459))
+- **notifications:** Duplicate types from optional packages ([#12446](https://github.com/aws-amplify/amplify-js/issues/12446)) ([#12452](https://github.com/aws-amplify/amplify-js/issues/12452)) ([6a1a0cb](https://github.com/aws-amplify/amplify-js/commit/6a1a0cb52001fb1ce6182b6a728fa515585b9b3a))
+- **notifications:** Intermediary activty not always created ([#11008](https://github.com/aws-amplify/amplify-js/issues/11008)) ([575cc62](https://github.com/aws-amplify/amplify-js/commit/575cc629cccf13cff733b572ff697c626b468b1d))
+- **notifications:** ios module pod cannot be autolinked in RN version < 0.69 ([#11751](https://github.com/aws-amplify/amplify-js/issues/11751)) ([028fd40](https://github.com/aws-amplify/amplify-js/commit/028fd40e55830febf3698e73f7691db9dcaacb09))
+- **notifications:** Support use_frameworks! ([#11253](https://github.com/aws-amplify/amplify-js/issues/11253)) ([08ad590](https://github.com/aws-amplify/amplify-js/commit/08ad590b065e421c800f59327703afd858887879))
+- **notifications:** the launch notification should be nullified when … ([#11206](https://github.com/aws-amplify/amplify-js/issues/11206)) ([98e1f48](https://github.com/aws-amplify/amplify-js/commit/98e1f480a8a6acae71a4d9d2c4f0db747611d68f))
+- **notifications:** update iOS launch notification determining logic ([#11076](https://github.com/aws-amplify/amplify-js/issues/11076)) ([7539cb8](https://github.com/aws-amplify/amplify-js/commit/7539cb8aa81d7cefdafe3e0c68d69ef88cd57d60))
+- **pn:** wrong launchNotificationOpened constant exporting ([#11011](https://github.com/aws-amplify/amplify-js/issues/11011)) ([659ca37](https://github.com/aws-amplify/amplify-js/commit/659ca37c2511864617dbc2e7efa52b0c0fdd0052))
+- **react-native:** Update namespaces to be unique ([#12510](https://github.com/aws-amplify/amplify-js/issues/12510)) ([e1d88c2](https://github.com/aws-amplify/amplify-js/commit/e1d88c2eee75ed28a33cc9e3354fc5af7ab1549a))
+- **rtn-push-notification:** wrong completion handler key ([#13604](https://github.com/aws-amplify/amplify-js/issues/13604)) ([af46e39](https://github.com/aws-amplify/amplify-js/commit/af46e3929ffc0dab4c88848fcc2dfc3ecbb5046f))
+- **rtn-push-notification:** wrong override signature ([#14360](https://github.com/aws-amplify/amplify-js/issues/14360)) ([893d9cf](https://github.com/aws-amplify/amplify-js/commit/893d9cf04bf1bb349e1d1a7094cf6507d413d713))
+
+### Features
+
+- **notifications:** Add additional push APIs ([#12316](https://github.com/aws-amplify/amplify-js/issues/12316)) ([10e10b1](https://github.com/aws-amplify/amplify-js/commit/10e10b1244898bb06333865dd11ab49ed804eb05))
+- **notifications:** Add badge count APIs ([#11037](https://github.com/aws-amplify/amplify-js/issues/11037)) ([9a58db9](https://github.com/aws-amplify/amplify-js/commit/9a58db97a91c8429e150ada8c03d650a9f3ddb77))
+- **notifications:** Add base React Native module package for Push ([#10945](https://github.com/aws-amplify/amplify-js/issues/10945)) ([d151e8d](https://github.com/aws-amplify/amplify-js/commit/d151e8d31aaa0a957cee671d6c4660162cb0f0ff))
+- **notifications:** Add getPermissionStatus API ([#10979](https://github.com/aws-amplify/amplify-js/issues/10979)) ([80f86a7](https://github.com/aws-amplify/amplify-js/commit/80f86a79b96c23f0c21ba3ae7f611f3904d59437))
+- **notifications:** Add Push Notification ([#10972](https://github.com/aws-amplify/amplify-js/issues/10972)) ([97acab6](https://github.com/aws-amplify/amplify-js/commit/97acab69c6452c860af1f45fbcfda8fd80c26ca3))
+- **notifications:** Android native module implementation ([#10948](https://github.com/aws-amplify/amplify-js/issues/10948)) ([8bd5a92](https://github.com/aws-amplify/amplify-js/commit/8bd5a92504e68cbd9516bcd6209ced14c2c9283d))
+- **notifications:** Refactor push notification to be functional ([#12305](https://github.com/aws-amplify/amplify-js/issues/12305)) ([8eb24ad](https://github.com/aws-amplify/amplify-js/commit/8eb24add53c0dc188d7331a9c49cd01073bbc1f5)), closes [#12301](https://github.com/aws-amplify/amplify-js/issues/12301) [#12292](https://github.com/aws-amplify/amplify-js/issues/12292) [#12276](https://github.com/aws-amplify/amplify-js/issues/12276) [#12294](https://github.com/aws-amplify/amplify-js/issues/12294) [#12310](https://github.com/aws-amplify/amplify-js/issues/12310) [#12304](https://github.com/aws-amplify/amplify-js/issues/12304)
+- **pn:** add push notification ios native module ([#10973](https://github.com/aws-amplify/amplify-js/issues/10973)) ([963a9e1](https://github.com/aws-amplify/amplify-js/commit/963a9e153169d896437d1ec6235b4a07219dfe80))
+- **repo:** set up rollup to emit esm and cjs artifacts ([#12522](https://github.com/aws-amplify/amplify-js/issues/12522)) ([903a012](https://github.com/aws-amplify/amplify-js/commit/903a0123e51f69ff3476b6b15aa89a73b750f9dc))
+
+### Reverts
+
+- Revert "chore(release): Publish" (#13027) ([f6f4f42](https://github.com/aws-amplify/amplify-js/commit/f6f4f42befa04ed3c1502fa0adf17c6700abfddf)), closes [#13027](https://github.com/aws-amplify/amplify-js/issues/13027)
+- Revert "chore(repo): use typescript 5.0.2 across workspace" (#12941) ([dc04ba1](https://github.com/aws-amplify/amplify-js/commit/dc04ba18604291d9618a681e7ec4cdb801a355c8)), closes [#12941](https://github.com/aws-amplify/amplify-js/issues/12941)
+
 ## [1.2.34](https://github.com/aws-amplify/amplify-js/compare/@aws-amplify/rtn-push-notification@1.2.33...@aws-amplify/rtn-push-notification@1.2.34) (2025-04-28)
 
 ### Bug Fixes

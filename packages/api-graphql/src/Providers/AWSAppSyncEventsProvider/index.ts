@@ -28,6 +28,7 @@ interface AWSAppSyncEventProviderOptions {
 	additionalHeaders?: CustomHeaders;
 	additionalCustomHeaders?: Record<string, string>;
 	authToken?: string;
+	host?: string;
 }
 
 interface DataPayload {
@@ -104,6 +105,7 @@ export class AWSAppSyncEventProvider extends AWSWebSocketProvider {
 			apiKey,
 			region,
 			variables,
+			host,
 		} = options;
 
 		const data = {
@@ -121,6 +123,7 @@ export class AWSAppSyncEventProvider extends AWSWebSocketProvider {
 				canonicalUri: '',
 				region,
 				additionalCustomHeaders,
+				host,
 			})),
 			...libraryConfigHeaders,
 			...additionalCustomHeaders,

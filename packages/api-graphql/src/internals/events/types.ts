@@ -85,6 +85,7 @@ export interface EventsOptions {
 	authMode?: GraphQLAuthMode;
 	authToken?: string;
 	apiKey?: string;
+	host?: string;
 }
 
 export interface PublishedEvent {

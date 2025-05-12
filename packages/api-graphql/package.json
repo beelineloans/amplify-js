@@ -1,6 +1,6 @@
 {
-	"name": "@aws-amplify/api-graphql",
-	"version": "4.7.15",
+	"name": "@beelineloans/aws-amplify-api-graphql",
+	"version": "4.7.15-1",
 	"description": "Api-graphql category of aws-amplify",
 	"main": "./dist/cjs/index.js",
 	"module": "./dist/esm/index.mjs",

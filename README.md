@@ -7,6 +7,28 @@
 [![code coverage](https://codecov.io/gh/aws-amplify/amplify-js/branch/main/graph/badge.svg)](https://codecov.io/gh/aws-amplify/amplify-js)
 [![join discord](https://img.shields.io/discord/308323056592486420?logo=discord)](https://discord.gg/jWVbPfC)
 
+### Beeline - Changes
+
+1. We need to be able to set the host property in the sub/pub WebSocket messages to the underlying AppSync HTTP endpoint. To do this we need to deploy 3 packages to Github from this monorepo: 
+	- api-graphql (@beelineloans/aws-amplify-api-graphql): where the code changes are made
+	- api (@beelineloans/aws-amplify-api): is a dependent of aws-amplify and has a dependency of api-graphql
+	- aws-amplify (@beelineloans/aws-amplify): direct dependency used in hive/ui 
+	 
+
+### Beeline - Creating a new version
+
+1. Base any changes off the latest branch in the repo (not main)
+2. Run `yarn`
+3. Revert yarn.lock changes
+4. Run `yarn bootstrap`
+5. Run `yarn build`
+6. Increment the pre-release id of api-graphql, api and aws-amplify packages and update the dependency versions in api and aws-amplify package.json's
+7. Navigate to each of the api-graphql, api, and aws-amplify directories, respectively and run `npm publish --registry=https://npm.pkg.github.com`
+7. Create branch with the name of the package version followed by a pre-release incrementer e.g. `git checkout -b 6.14.4-0`
+8. DO NOT MERGE TO MAIN BRANCH, WE WANT TO KEEP THAT CONSISTENT WITH THE ORIGINAL PACKAGE
+9. git push
+
+
 ### Reporting Bugs / Feature Requests
 
 [![Open Bugs](https://img.shields.io/github/issues/aws-amplify/amplify-js/bug?color=d73a4a&label=bugs)](https://github.com/aws-amplify/amplify-js/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
@@ -60,91 +82,91 @@ To get started pick your platform from our [**Getting Started** home page](https
 
 - If you are using **default exports** from any Amplify package, then you will need to migrate to using named exports. For example:
 
-  ```diff
-  - import Amplify from 'aws-amplify';
-  + import { Amplify } from 'aws-amplify'
+	```diff
+	- import Amplify from 'aws-amplify';
+	+ import { Amplify } from 'aws-amplify'
 
-  - import Analytics from '@aws-amplify/analytics';
-  + import { Analytics } from '@aws-amplify/analytics';
-  // or better
-  + import { Analytics } from 'aws-amplify';
+	- import Analytics from '@aws-amplify/analytics';
+	+ import { Analytics } from '@aws-amplify/analytics';
+	// or better
+	+ import { Analytics } from 'aws-amplify';
 
-  - import Storage from '@aws-amplify/storage';
-  + import { Storage } from '@aws-amplify/storage';
-  // or better
-  + import { Storage } from 'aws-amplify';
-  ```
+	- import Storage from '@aws-amplify/storage';
+	+ import { Storage } from '@aws-amplify/storage';
+	// or better
+	+ import { Storage } from 'aws-amplify';
+	```
 
 - Datastore predicate syntax has changed, impacting the `DataStore.query`, `DataStore.save`, `DataStore.delete`, and `DataStore.observe` interfaces. For example:
 
-  ```diff
-  - await DataStore.delete(Post, (post) => post.status('eq', PostStatus.INACTIVE));
-  + await DataStore.delete(Post, (post) => post.status.eq(PostStatus.INACTIVE));
+	```diff
+	- await DataStore.delete(Post, (post) => post.status('eq', PostStatus.INACTIVE));
+	+ await DataStore.delete(Post, (post) => post.status.eq(PostStatus.INACTIVE));
 
-  - await DataStore.query(Post, p => p.and( p => [p.title('eq', 'Amplify Getting Started Guide'), p.score('gt', 8)]));
-  + await DataStore.query(Post, p => p.and( p => [p.title.eq('Amplify Getting Started Guide'), p.score.gt(8)]));
-  ```
+	- await DataStore.query(Post, p => p.and( p => [p.title('eq', 'Amplify Getting Started Guide'), p.score('gt', 8)]));
+	+ await DataStore.query(Post, p => p.and( p => [p.title.eq('Amplify Getting Started Guide'), p.score.gt(8)]));
+	```
 
-  - To use the new syntax with 5.x.x you may need to rebuild your Datastore models with the latest version of Amplify codegen. To do this:
-    - [Upgrade the Amplify CLI](https://docs.amplify.aws/cli/start/workflows/#upgrade-amplify-cli)
-      - `npm install -g @aws-amplify/cli`
-    - [Re-generate your models with Amplify codegen](https://docs.amplify.aws/lib/datastore/getting-started/q/platform/js/#code-generation-amplify-cli)
-      - `amplify codegen models`
+	- To use the new syntax with 5.x.x you may need to rebuild your Datastore models with the latest version of Amplify codegen. To do this:
+		- [Upgrade the Amplify CLI](https://docs.amplify.aws/cli/start/workflows/#upgrade-amplify-cli)
+			- `npm install -g @aws-amplify/cli`
+		- [Re-generate your models with Amplify codegen](https://docs.amplify.aws/lib/datastore/getting-started/q/platform/js/#code-generation-amplify-cli)
+			- `amplify codegen models`
 
 - `Storage.list` has changed the name of the `maxKeys` parameter to `pageSize` and has a new return type that contains the results list. For example:
 
-  ```diff
-  - const photos = await Storage.list('photos/', { maxKeys: 100 });
-  - const { key } = photos[0];
+	```diff
+	- const photos = await Storage.list('photos/', { maxKeys: 100 });
+	- const { key } = photos[0];
 
-  + const photos = await Storage.list('photos/', { pageSize: 100 });
-  + const { key } = photos.results[0];
-  ```
+	+ const photos = await Storage.list('photos/', { pageSize: 100 });
+	+ const { key } = photos.results[0];
+	```
 
 - `Storage.put` with resumable turned on has changed the key to no longer include the bucket name. For example:
 
-  ```diff
-  - let uploadedObjectKey;
-  - Storage.put(file.name, file, {
-  -   resumable: true,
-  -   // Necessary to parse the bucket name out to work with the key
-  -   completeCallback: (obj) => uploadedObjectKey = obj.key.substring( obj.key.indexOf("/") + 1 )
-  - }
+	```diff
+	- let uploadedObjectKey;
+	- Storage.put(file.name, file, {
+	-   resumable: true,
+	-   // Necessary to parse the bucket name out to work with the key
+	-   completeCallback: (obj) => uploadedObjectKey = obj.key.substring( obj.key.indexOf("/") + 1 )
+	- }
 
-  + let uploadedObjectKey;
-  + Storage.put(file.name, file, {
-  +   resumable: true,
-  +   completeCallback: (obj) => uploadedObjectKey = obj.key
-  + }
-  ```
+	+ let uploadedObjectKey;
+	+ Storage.put(file.name, file, {
+	+   resumable: true,
+	+   completeCallback: (obj) => uploadedObjectKey = obj.key
+	+ }
+	```
 
 - `Analytics.record` no longer accepts string as input. For example:
 
-  ```diff
-  - Analytics.record('my example event');
-  + Analytics.record({ name: 'my example event' });
-  ```
+	```diff
+	- Analytics.record('my example event');
+	+ Analytics.record({ name: 'my example event' });
+	```
 
 - The `JS` export has been removed from `@aws-amplify/core` in favor of exporting the functions it contained.
 - Any calls to `Amplify.Auth`, `Amplify.Cache`, and `Amplify.ServiceWorker` are no longer supported. Instead, your code should use the named exports. For example:
 
-  ```diff
-  - import { Amplify } from 'aws-amplify';
-  - Amplify.configure(...);
-  - // ...
-  - Amplify.Auth.signIn(...);
+	```diff
+	- import { Amplify } from 'aws-amplify';
+	- Amplify.configure(...);
+	- // ...
+	- Amplify.Auth.signIn(...);
 
-  + import { Amplify, Auth } from 'aws-amplify';
-  + Amplify.configure(...);
-  + // ...
-  + Auth.signIn(...);
-  ```
+	+ import { Amplify, Auth } from 'aws-amplify';
+	+ Amplify.configure(...);
+	+ // ...
+	+ Auth.signIn(...);
+	```
 
 ### Amplify 4.x.x has breaking changes for React Native. Please see the breaking changes below:
 
 - If you are using React Native (vanilla or Expo), you will need to add the following React Native community dependencies:
-  - `@react-native-community/netinfo`
-  - `@react-native-async-storage/async-storage`
+	- `@react-native-community/netinfo`
+	- `@react-native-async-storage/async-storage`
 
 ```
 // React Native
@@ -158,23 +180,23 @@ yarn add aws-amplify @react-native-community/netinfo @react-native-async-storage
 ### Amplify 3.x.x has breaking changes. Please see the breaking changes below:
 
 - `AWS.credentials` and `AWS.config` don’t exist anymore in Amplify JavaScript.
-  - Both options will not be available to use in version 3. You will not be able to use and set your own credentials.
-  - For more information on this change, please see the [AWS SDK for JavaScript v3](https://github.com/aws/aws-sdk-js-v3/#configuration)
+	- Both options will not be available to use in version 3. You will not be able to use and set your own credentials.
+	- For more information on this change, please see the [AWS SDK for JavaScript v3](https://github.com/aws/aws-sdk-js-v3/#configuration)
 - `aws-sdk@2.x` has been removed from `Amplify@3.x.x` in favor of [version 3 of aws-sdk-js](https://github.com/aws/aws-sdk-js-v3). We recommend to migrate to [aws-sdk-js-v3](https://github.com/aws/aws-sdk-js-v3) if you rely on AWS services that are not supported by Amplify, since [aws-sdk-js-v3](https://github.com/aws/aws-sdk-js-v3) is imported modularly.
 
 If you can't migrate to [aws-sdk-js-v3](https://github.com/aws/aws-sdk-js-v3) or rely on aws-sdk@2.x, you will need to import it separately.
 
 - If you are using exported paths within your Amplify JS application, (e.g. `import from "@aws-amplify/analytics/lib/Analytics"`) this will now break and no longer will be supported. You will need to change to named imports:
 
-  ```js
-  import { Analytics } from 'aws-amplify';
-  ```
+	```js
+	import { Analytics } from 'aws-amplify';
+	```
 
 - If you are using categories as `Amplify.<Category>`, this will no longer work and we recommend to import the category you are needing to use:
 
-  ```js
-  import { Auth } from 'aws-amplify';
-  ```
+	```js
+	import { Auth } from 'aws-amplify';
+	```
 
 ### DataStore Docs
 

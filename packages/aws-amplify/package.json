@@ -1,6 +1,6 @@
 {
-	"name": "aws-amplify",
-	"version": "6.14.4",
+	"name": "@beelineloans/aws-amplify",
+	"version": "6.14.6-2",
 	"description": "AWS Amplify is a JavaScript library for Frontend and mobile developers building cloud-enabled applications.",
 	"main": "./dist/cjs/index.js",
 	"module": "./dist/esm/index.mjs",
@@ -294,7 +294,7 @@
 	],
 	"dependencies": {
 		"@aws-amplify/analytics": "7.0.80",
-		"@aws-amplify/api": "6.3.11",
+		"@aws-amplify/api": "npm:@beelineloans/aws-amplify-api@6.3.11-2",
 		"@aws-amplify/auth": "6.12.4",
 		"@aws-amplify/core": "6.11.4",
 		"@aws-amplify/datastore": "5.0.82",

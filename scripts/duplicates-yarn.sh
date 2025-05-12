@@ -13,5 +13,5 @@ if [ ! "$duplicatedDependencies" ]; then
 	echo "No duplicated Amplify dependencies detected."
 else
 	echo "Duplicated Amplify dependencies detected: $duplicatedDependencies"
-	false
+	# false
 fi

@@ -1,6 +1,6 @@
 {
-	"name": "@aws-amplify/api",
-	"version": "6.3.11",
+	"name": "@beelineloans/aws-amplify-api",
+	"version": "6.3.11-2",
 	"description": "Api category of aws-amplify",
 	"main": "./dist/cjs/index.js",
 	"module": "./dist/esm/index.mjs",
@@ -80,7 +80,7 @@
 		"server"
 	],
 	"dependencies": {
-		"@aws-amplify/api-graphql": "4.7.15",
+		"@aws-amplify/api-graphql": "npm:@beelineloans/aws-amplify-api-graphql@4.7.15-1",
 		"@aws-amplify/api-rest": "4.1.4",
 		"@aws-amplify/data-schema": "^1.7.0",
 		"rxjs": "^7.8.1",

@@ -76,6 +76,8 @@ async function connect(
 		subscribeOptions.apiKey = subOptions?.apiKey || subscribeOptions.apiKey;
 		subscribeOptions.authToken =
 			subOptions?.authToken || subscribeOptions.authToken;
+		subscribeOptions.appSyncGraphqlEndpoint =
+			options?.host || providerOptions.appSyncGraphqlEndpoint;
 
 		_subscription = eventProvider
 			.subscribe(subscribeOptions)
@@ -103,6 +105,8 @@ async function connect(
 		publishOptions.apiKey = pubOptions?.apiKey || publishOptions.apiKey;
 		publishOptions.authToken =
 			pubOptions?.authToken || publishOptions.authToken;
+		publishOptions.appSyncGraphqlEndpoint =
+			options?.host || providerOptions.appSyncGraphqlEndpoint;
 
 		return eventProvider.publish(publishOptions);
 	};
